@@ -1,0 +1,16 @@
+:root {
+
+    --color-brand: var(--primary-bg2-default);
+    --color-brand-hover: var(--primary-bg2-hover);
+    --color-brand-pressed: var(--primary-bg2-press);
+    --color-brand-disabled: var(--primary-bg2-disable);
+  
+    --color-danger: var(--error-bg2-default);
+    --color-danger-hover: var(--error-bg2-hover);
+    --color-danger-pressed: var(--error-bg2-press);
+    --color-danger-disabled: var(--error-bg2-disable);
+  
+    --border-default: var(--neutral-st2-default);
+    --border-disabled: var(--neutral-st2-disable);
+  
+  }

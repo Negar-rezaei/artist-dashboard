@@ -1,0 +1,15 @@
+:root {
+
+    --button-primary-bg: var(--color-brand);
+    --button-primary-bg-hover: var(--color-brand-hover);
+    --button-primary-bg-pressed: var(--color-brand-pressed);
+    --button-primary-bg-disabled: var(--color-brand-disabled);
+  
+    --button-danger-bg: var(--color-danger);
+    --button-danger-bg-hover: var(--color-danger-hover);
+    --button-danger-bg-pressed: var(--color-danger-pressed);
+    --button-danger-bg-disabled: var(--color-danger-disabled);
+  
+    --button-border: var(--border-default);
+  
+  }

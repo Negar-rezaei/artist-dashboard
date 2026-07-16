@@ -1,0 +1,22 @@
+@theme {
+
+    /* Primary */
+
+    --primary-bg2-default: #009595;
+    --primary-bg2-hover: #007070;
+    --primary-bg2-press: #004A4A;
+    --primary-bg2-disable: #99E3E3;
+  
+    /* Error */
+  
+    --error-bg2-default: #D61E20;
+    --error-bg2-hover: #AB181A;
+    --error-bg2-press: #801213;
+    --error-bg2-disable: #EFA5A6;
+  
+    /* Neutral */
+  
+    --neutral-st2-default: #CCCCCC;
+    --neutral-st2-disable: #CCCCCC;
+  
+  }

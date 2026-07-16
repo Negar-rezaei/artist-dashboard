@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@import "../styles/theme.css";
+
+@import "../design-system/tokens/primitive.css";
+@import "../design-system/tokens/semantic.css";
+@import "../design-system/tokens/component.css";
