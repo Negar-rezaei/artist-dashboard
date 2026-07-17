@@ -1,6 +1,5 @@
-import { CircleCheck } from "lucide-react";
-
 import { Button } from "@/components/ui/button/Button";
+import { Icon } from "@/components/ui/icon/Icon";
 
 const states = [
   {
@@ -39,7 +38,7 @@ export default function Home() {
 
               <Button
                 variant={variant}
-                icon={<CircleCheck size={18} />}
+                icon={<Icon name="checkCircle" size={18} />}
                 aria-label="check"
               />
 
@@ -54,7 +53,7 @@ export default function Home() {
 
               <Button
                 variant={variant}
-                icon={<CircleCheck size={18} />}
+                icon={<Icon name="checkCircle" size={18} />}
                 className="pointer-events-none"
               />
 
@@ -69,7 +68,7 @@ export default function Home() {
 
               <Button
                 variant={variant}
-                icon={<CircleCheck size={18} />}
+                icon={<Icon name="checkCircle" size={18} />}
                 className="pointer-events-none"
               />
 
@@ -85,7 +84,7 @@ export default function Home() {
               <Button
                 variant={variant}
                 loading
-                icon={<CircleCheck size={18} />}
+                icon={<Icon name="checkCircle" size={18} />}
                 aria-label="loading"
               />
 
@@ -101,7 +100,7 @@ export default function Home() {
               <Button
                 variant={variant}
                 disabled
-                icon={<CircleCheck size={18} />}
+                icon={<Icon name="checkCircle" size={18} />}
                 aria-label="disabled"
               />
 
