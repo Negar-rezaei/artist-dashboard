@@ -1,6 +1,6 @@
 import { cn } from "@/lib/cn";
 
-import { Spinner } from "./Spinner";
+import { Spinner } from "../../shared/spinner/Spinner";
 import { ButtonProps } from "./button.types";
 import { buttonVariants } from "./button.variants";
 
@@ -51,21 +51,16 @@ export function Button({
         )}
       >
         {icon && (
-          <span
-            className="flex shrink-0 items-center justify-center"
-          >
+          <span className="flex shrink-0 items-center justify-center">
             {icon}
           </span>
         )}
 
         {children}
-
       </span>
 
       {loading && (
-        <span
-          className="absolute inset-0 flex items-center justify-center"
-        >
+        <span className="absolute inset-0 flex items-center justify-center">
           <Spinner />
         </span>
       )}
