@@ -7,17 +7,10 @@ items-center
 justify-center
 gap-2
 cursor-pointer
-
 overflow-hidden
-
 rounded-xl
-
-font-semibold
-
 whitespace-nowrap
-
 select-none
-
 transition-[background-color,border-color,color,box-shadow]
 duration-200
 ease-out
@@ -46,7 +39,6 @@ export const buttonVariants = cva(base, {
         `,
       secondary: `
         border
-
         border-button-secondary
 
         text-button-secondary-fg
@@ -74,9 +66,9 @@ export const buttonVariants = cva(base, {
     },
 
     size: {
-      sm: "h-8 px-3 text-sm",
-      md: "h-10 px-4 text-sm",
-      lg: "h-12 px-5 text-base",
+      sm: "h-8 px-3 body-md-strong",
+      md: "h-10 px-4 body-md-strong",
+      lg: "h-12 px-5 body-lg-strong",
     },
     fullWidth: {
       true: "w-full",

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+@import "../styles/typography.css";
 @import "../styles/theme.css";
 
 @import "../design-system/tokens/primitive.css";

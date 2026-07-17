@@ -1,7 +1,7 @@
 @theme {
 
-    /* اینجا فقط رنگ واقعی قرار می‌گیرد. */
-
+    --font-family-sans: "Inter", sans-serif;
+  
     /* Primary */
 
     --primary-bg2-default: #009595;

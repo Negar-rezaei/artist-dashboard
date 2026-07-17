@@ -22,7 +22,7 @@ export default function Home() {
       <div className="mx-auto flex max-w-5xl flex-col gap-12">
         {states.map(({ title, variant }) => (
           <section key={variant}>
-            <h2 className="mb-6 text-xl font-bold">
+            <h2 className="mb-6 heading-md">
               {title}
             </h2>
 
