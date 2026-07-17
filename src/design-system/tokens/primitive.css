@@ -18,7 +18,27 @@
   
     /* Neutral */
   
+    --neutral-bg1-default: #FFFFFF;
+
+    --neutral-st1-default: #7F7F7F;
+    --neutral-st1-disable: #7F7F7F;
+
     --neutral-st2-default: #CCCCCC;
+    --neutral-st2-hover: #B3B3B3;
     --neutral-st2-disable: #CCCCCC;
+
+    --neutral-fg1-default: #333333;
+    --neutral-fg1-disable: #CCCCCC;
+
+    --neutral-fg2-default: #999999;
+    --neutral-fg2-disable: #CCCCCC;
+
+    /* Primary - Foreground */
+
+    --primary-fg1-default: #009595;
+
+    /* Error - Foreground */
+
+    --error-fg1-default: #D61E20;
   
   }

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button/Button";
 import { Icon } from "@/components/ui/icon/Icon";
+import { Input } from "@/components/ui/input";
 
 const states = [
   {
@@ -22,17 +23,12 @@ export default function Home() {
       <div className="mx-auto flex max-w-5xl flex-col gap-12">
         {states.map(({ title, variant }) => (
           <section key={variant}>
-            <h2 className="mb-6 heading-md">
-              {title}
-            </h2>
+            <h2 className="mb-6 heading-md">{title}</h2>
 
             <div className="flex flex-wrap items-center gap-6">
-
               {/* Default Text */}
 
-              <Button variant={variant}>
-                button
-              </Button>
+              <Button variant={variant}>button</Button>
 
               {/* Default Icon */}
 
@@ -44,10 +40,7 @@ export default function Home() {
 
               {/* Hover */}
 
-              <Button
-                variant={variant}
-                className="pointer-events-none"
-              >
+              <Button variant={variant} className="pointer-events-none">
                 Hover
               </Button>
 
@@ -59,10 +52,7 @@ export default function Home() {
 
               {/* Press */}
 
-              <Button
-                variant={variant}
-                className="pointer-events-none"
-              >
+              <Button variant={variant} className="pointer-events-none">
                 Press
               </Button>
 
@@ -74,10 +64,7 @@ export default function Home() {
 
               {/* Loading */}
 
-              <Button
-                variant={variant}
-                loading
-              >
+              <Button variant={variant} loading>
                 button
               </Button>
 
@@ -90,10 +77,7 @@ export default function Home() {
 
               {/* Disabled */}
 
-              <Button
-                variant={variant}
-                disabled
-              >
+              <Button variant={variant} disabled>
                 button
               </Button>
 
@@ -103,11 +87,80 @@ export default function Home() {
                 icon={<Icon name="checkCircle" size={18} />}
                 aria-label="disabled"
               />
-
             </div>
           </section>
         ))}
       </div>
+
+      <section>
+        <h2 className="mb-6 heading-md">Input</h2>
+
+        <div className="flex flex-col gap-6 max-w-md">
+          {/* Default */}
+
+          <Input placeholder="Default" />
+
+          {/* Filled */}
+
+          <Input defaultValue="Filled value" />
+
+          {/* Hover */}
+
+          <Input
+            placeholder="Hover"
+            className="pointer-events-none border-input-border-hover"
+          />
+
+          {/* Active */}
+
+          <Input
+            placeholder="Active"
+            className="border-input-border-active ring-2 ring-input-border-active"
+          />
+
+          {/* Readonly */}
+
+          <Input defaultValue="Readonly" readOnly />
+
+          {/* Disabled */}
+
+          <Input placeholder="Disabled" disabled />
+
+          {/* Error */}
+
+          <Input placeholder="Error" error />
+
+          {/* Left Icon */}
+
+          <Input
+            placeholder="Search..."
+            leftAdornment={<Icon name="warning" size={18} />}
+          />
+
+          {/* Right Icon */}
+
+          <Input
+            placeholder="Password"
+            rightAdornment={<Icon name="warning" size={18} />}
+          />
+
+          {/* Loading */}
+
+          <Input placeholder="Loading..." loading />
+
+          {/* Large */}
+
+          <Input size="lg" placeholder="Large" />
+
+          {/* Medium */}
+
+          <Input size="md" placeholder="Medium" />
+
+          {/* Small */}
+
+          <Input size="sm" placeholder="Small" />
+        </div>
+      </section>
     </main>
   );
 }

@@ -27,8 +27,27 @@
     --color-button-danger-disabled: var(--button-danger-bg-disabled);
     --color-button-danger-fg: var(--button-danger-fg);
 
+    /* Input */
+
+    --color-input-bg: var(--input-bg);
+    --color-input-bg-disabled: var(--input-bg-disabled);
+
+    --color-input-border: var(--input-border);
+    --color-input-border-hover: var(--input-border-hover);
+    --color-input-border-active: var(--input-border-active);
+    --color-input-border-disabled: var(--input-border-disabled);
+    --color-input-border-readonly: var(--input-border-readonly);
+    --color-input-border-error: var(--input-border-error);
+
+    --color-input-fg: var(--input-fg);
+    --color-input-fg-disabled: var(--input-fg-disabled);
+
+    --color-input-placeholder: var(--input-placeholder);
+    --color-input-placeholder-disabled: var(--input-placeholder-disabled);
+
     /* Radius */
 
     --radius-button: 12px;
+    --radius-input: 8px;
 
 }

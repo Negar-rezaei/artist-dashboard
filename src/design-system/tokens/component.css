@@ -33,5 +33,24 @@
     --button-danger-bg-disabled: #EFA5A6;
   
     --button-danger-fg: #ffffff;
+
+
+    /* INPUT */
+
+    --input-bg: var(--neutral-bg1-default);
+    --input-bg-disabled: var(--neutral-bg1-default);
+
+    --input-border: var(--neutral-st2-default);
+    --input-border-hover: var(--neutral-st2-hover);
+    --input-border-active: var(--primary-fg1-default);
+    --input-border-disabled: var(--neutral-st2-disable);
+    --input-border-readonly: var(--neutral-st1-default);
+    --input-border-error: var(--error-fg1-default);
+
+    --input-fg: var(--neutral-fg1-default);
+    --input-fg-disabled: var(--neutral-fg1-disable);
+
+    --input-placeholder: var(--neutral-fg2-default);
+    --input-placeholder-disabled: var(--neutral-fg2-disable);
   
   }
