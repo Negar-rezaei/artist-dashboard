@@ -1,15 +1,37 @@
 :root {
 
-    --button-primary-bg: var(--color-brand);
-    --button-primary-bg-hover: var(--color-brand-hover);
-    --button-primary-bg-pressed: var(--color-brand-pressed);
-    --button-primary-bg-disabled: var(--color-brand-disabled);
+    /* PRIMARY */
   
-    --button-danger-bg: var(--color-danger);
-    --button-danger-bg-hover: var(--color-danger-hover);
-    --button-danger-bg-pressed: var(--color-danger-pressed);
-    --button-danger-bg-disabled: var(--color-danger-disabled);
+    --button-primary-bg: var(--primary-bg2-default);
+    --button-primary-bg-hover: var(--primary-bg2-hover);
+    --button-primary-bg-pressed: var(--primary-bg2-press);
+    --button-primary-bg-disabled: var(--primary-bg2-disable);
   
-    --button-border: var(--border-default);
+    --button-primary-fg: #ffffff;
+  
+  
+  
+    /* SECONDARY */
+  
+    --button-secondary-border: #CCCCCC;
+    --button-secondary-border-hover: #B3B3B3;
+    --button-secondary-border-pressed: #999999;
+    --button-secondary-border-disabled: #CCCCCC;
+  
+    --button-secondary-fg: #333333;
+    --button-secondary-fg-hover: #191919;
+    --button-secondary-fg-pressed: #000000;
+    --button-secondary-fg-disabled: #CCCCCC;
+  
+  
+  
+    /* DANGER */
+  
+    --button-danger-bg: #D61E20;
+    --button-danger-bg-hover: #AB181A;
+    --button-danger-bg-pressed: #801213;
+    --button-danger-bg-disabled: #EFA5A6;
+  
+    --button-danger-fg: #ffffff;
   
   }

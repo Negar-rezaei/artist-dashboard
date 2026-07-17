@@ -1,5 +1,7 @@
 :root {
 
+    /* اینجا معنی رنگ مشخص می‌شود. */
+
     --color-brand: var(--primary-bg2-default);
     --color-brand-hover: var(--primary-bg2-hover);
     --color-brand-pressed: var(--primary-bg2-press);
