@@ -1,156 +1,85 @@
 @theme {
+  /* Font Family */
+  --font-family-sans: Inter, ui-sans-serif, system-ui, sans-serif;
 
-    /*
-    ================================
-    Font Family
-    ================================
-    */
-  
-    --font-family-sans: Inter, ui-sans-serif, system-ui, sans-serif;
-  
-  
-    /*
-    ================================
-    Font Weight
-    ================================
-    */
-  
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-  
-  
-  
-    /*
-    ================================
-    Typography Scale
-    ================================
-    */
-  
-  
-    --text-body-lg: 16px;
-    --leading-body-lg: 24px;
-  
-  
-    --text-body-md: 14px;
-    --leading-body-md: 20px;
-  
-  
-    --text-caption: 12px;
-    --leading-caption: 16px;
-  
-  
-    --text-heading-xl: 32px;
-    --leading-heading-xl: 40px;
-  
-  
-    --text-heading-lg: 24px;
-    --leading-heading-lg: 32px;
-  
-  
-    --text-heading-md: 20px;
-    --leading-heading-md: 28px;
-  
-  }
-  
-  
+  /* Font Weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
   /*
-  ================================
-  Semantic Typography Utilities
-  ================================
-  */
-  
-  
-  @utility body-lg {
-  
-    font-size: var(--text-body-lg);
-  
-    line-height: var(--leading-body-lg);
-  
-    font-weight: var(--font-weight-regular);
-  
-  }
-  
-  
-  @utility body-lg-strong {
-  
-    font-size: var(--text-body-lg);
-  
-    line-height: var(--leading-body-lg);
-  
-    font-weight: var(--font-weight-semibold);
-  
-  }
-  
-  
-  
-  @utility body-md {
-  
-    font-size: var(--text-body-md);
-  
-    line-height: var(--leading-body-md);
-  
-    font-weight: var(--font-weight-regular);
-  
-  }
-  
-  
-  
-  @utility body-md-strong {
-  
-    font-size: var(--text-body-md);
-  
-    line-height: var(--leading-body-md);
-  
-    font-weight: var(--font-weight-semibold);
-  
-  }
-  
-  
-  
-  @utility heading-xl {
-  
-    font-size: var(--text-heading-xl);
-  
-    line-height: var(--leading-heading-xl);
-  
-    font-weight: var(--font-weight-bold);
-  
-  }
-  
-  
-  
-  @utility heading-lg {
-  
-    font-size: var(--text-heading-lg);
-  
-    line-height: var(--leading-heading-lg);
-  
-    font-weight: var(--font-weight-bold);
-  
-  }
-  
-  
-  
-  @utility heading-md {
-  
-    font-size: var(--text-heading-md);
-  
-    line-height: var(--leading-heading-md);
-  
-    font-weight: var(--font-weight-bold);
-  
-  }
-  
-  
-  
-  @utility caption {
-  
-    font-size: var(--text-caption);
-  
-    line-height: var(--leading-caption);
-  
-    font-weight: var(--font-weight-regular);
-  
-  }
+   * Typography Scale
+   * rem instead of px so the type scale respects the user's
+   * browser/OS font-size (accessibility / zoom preference).
+   */
+  --text-body-lg: 1rem;        /* 16px */
+  --leading-body-lg: 1.5rem;   /* 24px */
+
+  --text-body-md: 0.875rem;    /* 14px */
+  --leading-body-md: 1.25rem;  /* 20px */
+
+  --text-caption: 0.75rem;     /* 12px */
+  --leading-caption: 1rem;     /* 16px */
+
+  --text-heading-xl: 2rem;     /* 32px */
+  --leading-heading-xl: 2.5rem;/* 40px */
+
+  --text-heading-lg: 1.5rem;   /* 24px */
+  --leading-heading-lg: 2rem;  /* 32px */
+
+  --text-heading-md: 1.25rem;  /* 20px */
+  --leading-heading-md: 1.75rem;/* 28px */
+}
+
+/* ================================
+   Semantic Typography Utilities
+   ================================ */
+
+@utility body-lg {
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+  font-weight: var(--font-weight-regular);
+}
+
+@utility body-lg-strong {
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+@utility body-md {
+  font-size: var(--text-body-md);
+  line-height: var(--leading-body-md);
+  font-weight: var(--font-weight-regular);
+}
+
+@utility body-md-strong {
+  font-size: var(--text-body-md);
+  line-height: var(--leading-body-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+@utility heading-xl {
+  font-size: var(--text-heading-xl);
+  line-height: var(--leading-heading-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+@utility heading-lg {
+  font-size: var(--text-heading-lg);
+  line-height: var(--leading-heading-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+@utility heading-md {
+  font-size: var(--text-heading-md);
+  line-height: var(--leading-heading-md);
+  font-weight: var(--font-weight-bold);
+}
+
+@utility caption {
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+  font-weight: var(--font-weight-regular);
+}

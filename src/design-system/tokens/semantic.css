@@ -1,18 +1,50 @@
+/**
+ * =============================================================
+ * SEMANTIC TOKENS
+ * =============================================================
+ * Assigns meaning/role to primitives. This is the layer every
+ * component token (component.css) must resolve through — never
+ * a raw hex value, never a primitive reference directly.
+ */
+
 :root {
+  /* Brand */
+  --color-brand: var(--teal-500);
+  --color-brand-hover: var(--teal-600);
+  --color-brand-pressed: var(--teal-800);
+  --color-brand-disabled: var(--teal-200);
 
-    /* اینجا معنی رنگ مشخص می‌شود. */
+  /* Danger */
+  --color-danger: var(--red-500);
+  --color-danger-hover: var(--red-600);
+  --color-danger-pressed: var(--red-800);
+  --color-danger-disabled: var(--red-200);
 
-    --color-brand: var(--primary-bg2-default);
-    --color-brand-hover: var(--primary-bg2-hover);
-    --color-brand-pressed: var(--primary-bg2-press);
-    --color-brand-disabled: var(--primary-bg2-disable);
-  
-    --color-danger: var(--error-bg2-default);
-    --color-danger-hover: var(--error-bg2-hover);
-    --color-danger-pressed: var(--error-bg2-press);
-    --color-danger-disabled: var(--error-bg2-disable);
-  
-    --border-default: var(--neutral-st2-default);
-    --border-disabled: var(--neutral-st2-disable);
-  
-  }
+  /* Surface */
+  --color-surface: var(--gray-0);
+
+  /* Border */
+  --color-border: var(--gray-100);
+  --color-border-hover: var(--gray-200);
+  --color-border-pressed: var(--gray-300);
+  --color-border-disabled: var(--gray-100);
+  --color-border-readonly: var(--gray-400);
+  --color-border-focus: var(--teal-500);
+  --color-border-danger: var(--red-500);
+
+  /* Text */
+  --color-text: var(--gray-700);
+  --color-text-hover: var(--gray-900);
+  --color-text-pressed: var(--gray-1000);
+  --color-text-disabled: var(--gray-100);
+  --color-text-inverse: var(
+    --gray-0
+  ); /* text on filled brand/danger backgrounds */
+
+  /* Placeholder */
+  --color-placeholder: var(--gray-300);
+  --color-placeholder-disabled: var(--gray-100);
+
+  /* text */
+  --color-text-secondary: var(--gray-300);
+}

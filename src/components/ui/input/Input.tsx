@@ -2,27 +2,23 @@ import { forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
 
-import { inputVariants } from "./input.variants";
-
-import { Spinner } from "../../shared/spinner/Spinner";
 import type { InputProps } from "./input.types";
+import { inputVariants } from "./input.variants";
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   (
     {
       size,
 
-      error,
-
-      loading,
+      error = false,
 
       leftAdornment,
 
       rightAdornment,
 
-      disabled,
+      disabled = false,
 
-      readOnly,
+      readOnly = false,
 
       className,
 
@@ -33,7 +29,21 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="relative w-full">
         {leftAdornment && (
-          <span className="absolute left-3 top-1/2 z-0 flex shrink-0 -translate-y-1/2 items-center justify-center text-input-fg">
+          <span
+            className="
+              absolute
+              left-3
+              top-1/2
+              -translate-y-1/2
+
+              flex
+              items-center
+              justify-center
+
+              text-input-icon
+              pointer-events-none
+            "
+          >
             {leftAdornment}
           </span>
         )}
@@ -46,24 +56,32 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           className={cn(
             inputVariants({
               size,
-
               error,
-
-              state: disabled ? "disabled" : readOnly ? "readonly" : "default",
-
               hasLeftAdornment: !!leftAdornment,
-
-              hasRightAdornment: !!rightAdornment || loading,
+              hasRightAdornment: !!rightAdornment,
             }),
-
             className
           )}
           {...props}
         />
 
-        {(rightAdornment || loading) && (
-          <span className="absolute right-3 top-1/2 flex shrink-0 -translate-y-1/2 items-center justify-center text-input-fg">
-            {loading ? <Spinner /> : rightAdornment}
+        {rightAdornment && (
+          <span
+            className="
+              absolute
+              right-3
+              top-1/2
+              -translate-y-1/2
+
+              flex
+              items-center
+              justify-center
+
+              text-input-icon
+              pointer-events-none
+            "
+          >
+            {rightAdornment}
           </span>
         )}
       </div>

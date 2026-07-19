@@ -1,53 +1,61 @@
+/**
+ * =============================================================
+ * TAILWIND THEME REGISTRATION
+ * =============================================================
+ * The ONLY place (besides typography.css) allowed to use `@theme`.
+ * This is the public utility-generation surface: every var declared
+ * here becomes a Tailwind class (e.g. bg-button-primary).
+ */
+
 @theme {
+  /* Button - Primary */
+  --color-button-primary: var(--button-primary-bg);
+  --color-button-primary-hover: var(--button-primary-bg-hover);
+  --color-button-primary-pressed: var(--button-primary-bg-pressed);
+  --color-button-primary-disabled: var(--button-primary-bg-disabled);
+  --color-button-primary-fg: var(--button-primary-fg);
 
-    /* Button - Primary */
+  /* Button - Secondary */
+  --color-button-secondary: var(--button-secondary-border);
+  --color-button-secondary-hover: var(--button-secondary-border-hover);
+  --color-button-secondary-pressed: var(--button-secondary-border-pressed);
+  --color-button-secondary-disabled: var(--button-secondary-border-disabled);
+  --color-button-secondary-fg: var(--button-secondary-fg);
+  --color-button-secondary-fg-hover: var(--button-secondary-fg-hover);
+  --color-button-secondary-fg-pressed: var(--button-secondary-fg-pressed);
+  --color-button-secondary-fg-disabled: var(--button-secondary-fg-disabled);
 
-    --color-button-primary: var(--button-primary-bg);
-    --color-button-primary-hover: var(--button-primary-bg-hover);
-    --color-button-primary-pressed: var(--button-primary-bg-pressed);
-    --color-button-primary-disabled: var(--button-primary-bg-disabled);
-    --color-button-primary-fg: var(--button-primary-fg);
+  /* Button - Danger */
+  --color-button-danger: var(--button-danger-bg);
+  --color-button-danger-hover: var(--button-danger-bg-hover);
+  --color-button-danger-pressed: var(--button-danger-bg-pressed);
+  --color-button-danger-disabled: var(--button-danger-bg-disabled);
+  --color-button-danger-fg: var(--button-danger-fg);
 
-    /* Button - Secondary */
+  /* Input */
+  --color-input-bg: var(--input-bg);
+  --color-input-bg-disabled: var(--input-bg-disabled);
 
-    --color-button-secondary: var(--button-secondary-border);
-    --color-button-secondary-hover: var(--button-secondary-border-hover);
-    --color-button-secondary-pressed: var(--button-secondary-border-pressed);
-    --color-button-secondary-disabled: var(--button-secondary-border-disabled);
-    --color-button-secondary-fg: var(--button-secondary-fg);
-    --color-button-secondary-fg-hover: var(--button-secondary-fg-hover);
-    --color-button-secondary-fg-pressed: var(--button-secondary-fg-pressed);
-    --color-button-secondary-fg-disabled: var(--button-secondary-fg-disabled);
+  --color-input-border: var(--input-border);
+  --color-input-border-hover: var(--input-border-hover);
+  --color-input-border-active: var(--input-border-active);
+  --color-input-border-disabled: var(--input-border-disabled);
+  --color-input-border-readonly: var(--input-border-readonly);
+  --color-input-border-error: var(--input-border-error);
 
-    /* Button - Danger */
+  --color-input-fg: var(--input-fg);
+  --color-input-fg-disabled: var(--input-fg-disabled);
 
-    --color-button-danger: var(--button-danger-bg);
-    --color-button-danger-hover: var(--button-danger-bg-hover);
-    --color-button-danger-pressed: var(--button-danger-bg-pressed);
-    --color-button-danger-disabled: var(--button-danger-bg-disabled);
-    --color-button-danger-fg: var(--button-danger-fg);
+  --color-input-placeholder: var(--input-placeholder);
+  --color-input-placeholder-disabled: var(--input-placeholder-disabled);
 
-    /* Input */
+  /* Radius */
+  --radius-button: 0.75rem; /* 12px */
+  --radius-input: 0.5rem; /* 8px  */
 
-    --color-input-bg: var(--input-bg);
-    --color-input-bg-disabled: var(--input-bg-disabled);
-
-    --color-input-border: var(--input-border);
-    --color-input-border-hover: var(--input-border-hover);
-    --color-input-border-active: var(--input-border-active);
-    --color-input-border-disabled: var(--input-border-disabled);
-    --color-input-border-readonly: var(--input-border-readonly);
-    --color-input-border-error: var(--input-border-error);
-
-    --color-input-fg: var(--input-fg);
-    --color-input-fg-disabled: var(--input-fg-disabled);
-
-    --color-input-placeholder: var(--input-placeholder);
-    --color-input-placeholder-disabled: var(--input-placeholder-disabled);
-
-    /* Radius */
-
-    --radius-button: 12px;
-    --radius-input: 8px;
-
+  /* field */
+  --color-field-label: var(--field-label-fg);
+  --color-field-required: var(--field-required-fg);
+  --color-field-helper: var(--field-helper-fg);
+  --color-field-error: var(--field-error-fg);
 }

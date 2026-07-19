@@ -1,56 +1,58 @@
+/**
+ * =============================================================
+ * COMPONENT TOKENS
+ * =============================================================
+ * Component-scoped aliases of semantic tokens.
+ * Naming: --{component}-{part}-{state} (bare name = default state).
+ * A component should only ever read from here.
+ */
+
 :root {
+  /* ---------- Button / Primary ---------- */
+  --button-primary-bg: var(--color-brand);
+  --button-primary-bg-hover: var(--color-brand-hover);
+  --button-primary-bg-pressed: var(--color-brand-pressed);
+  --button-primary-bg-disabled: var(--color-brand-disabled);
+  --button-primary-fg: var(--color-text-inverse);
 
-    /* PRIMARY */
-  
-    --button-primary-bg: var(--primary-bg2-default);
-    --button-primary-bg-hover: var(--primary-bg2-hover);
-    --button-primary-bg-pressed: var(--primary-bg2-press);
-    --button-primary-bg-disabled: var(--primary-bg2-disable);
-  
-    --button-primary-fg: #ffffff;
-  
-  
-  
-    /* SECONDARY */
-  
-    --button-secondary-border: #CCCCCC;
-    --button-secondary-border-hover: #B3B3B3;
-    --button-secondary-border-pressed: #999999;
-    --button-secondary-border-disabled: #CCCCCC;
-  
-    --button-secondary-fg: #333333;
-    --button-secondary-fg-hover: #191919;
-    --button-secondary-fg-pressed: #000000;
-    --button-secondary-fg-disabled: #CCCCCC;
-  
-  
-  
-    /* DANGER */
-  
-    --button-danger-bg: #D61E20;
-    --button-danger-bg-hover: #AB181A;
-    --button-danger-bg-pressed: #801213;
-    --button-danger-bg-disabled: #EFA5A6;
-  
-    --button-danger-fg: #ffffff;
+  /* ---------- Button / Secondary ---------- */
+  --button-secondary-border: var(--color-border);
+  --button-secondary-border-hover: var(--color-border-hover);
+  --button-secondary-border-pressed: var(--color-border-pressed);
+  --button-secondary-border-disabled: var(--color-border-disabled);
 
+  --button-secondary-fg: var(--color-text);
+  --button-secondary-fg-hover: var(--color-text-hover);
+  --button-secondary-fg-pressed: var(--color-text-pressed);
+  --button-secondary-fg-disabled: var(--color-text-disabled);
 
-    /* INPUT */
+  /* ---------- Button / Danger ---------- */
+  --button-danger-bg: var(--color-danger);
+  --button-danger-bg-hover: var(--color-danger-hover);
+  --button-danger-bg-pressed: var(--color-danger-pressed);
+  --button-danger-bg-disabled: var(--color-danger-disabled);
+  --button-danger-fg: var(--color-text-inverse);
 
-    --input-bg: var(--neutral-bg1-default);
-    --input-bg-disabled: var(--neutral-bg1-default);
+  /* ---------- Input ---------- */
+  --input-bg: var(--color-surface);
+  --input-bg-disabled: var(--color-surface);
 
-    --input-border: var(--neutral-st2-default);
-    --input-border-hover: var(--neutral-st2-hover);
-    --input-border-active: var(--primary-fg1-default);
-    --input-border-disabled: var(--neutral-st2-disable);
-    --input-border-readonly: var(--neutral-st1-default);
-    --input-border-error: var(--error-fg1-default);
+  --input-border: var(--color-border);
+  --input-border-hover: var(--color-border-hover);
+  --input-border-active: var(--color-border-focus);
+  --input-border-disabled: var(--color-border-disabled);
+  --input-border-readonly: var(--color-border-readonly);
+  --input-border-error: var(--color-border-danger);
 
-    --input-fg: var(--neutral-fg1-default);
-    --input-fg-disabled: var(--neutral-fg1-disable);
+  --input-fg: var(--color-text);
+  --input-fg-disabled: var(--color-text-disabled);
 
-    --input-placeholder: var(--neutral-fg2-default);
-    --input-placeholder-disabled: var(--neutral-fg2-disable);
-  
-  }
+  --input-placeholder: var(--color-placeholder);
+  --input-placeholder-disabled: var(--color-placeholder-disabled);
+
+  /* ---------- Field ---------- */
+  --field-label-fg: var(--color-text);
+  --field-required-fg: var(--color-danger);
+  --field-helper-fg: var(--color-text-secondary, var(--gray-300));
+  --field-error-fg: var(--color-danger);
+}

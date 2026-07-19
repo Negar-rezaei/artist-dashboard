@@ -1,44 +1,36 @@
-@theme {
+/**
+ * =============================================================
+ * PRIMITIVE TOKENS
+ * =============================================================
+ * Raw, context-free values — no usage decisions live here.
+ * Rules:
+ *  - Plain `:root` (NOT `@theme`) on purpose: Tailwind must not
+ *    generate utility classes from raw palette values. This forces
+ *    every consumer through semantic.css instead of e.g. `bg-teal-500`
+ *    showing up ad-hoc in JSX.
+ *  - Only semantic.css may reference these variables.
+ */
 
-    --font-family-sans: "Inter", sans-serif;
-  
-    /* Primary */
+:root {
+  /* Teal — brand scale */
+  --teal-200: #99e3e3; /* disabled */
+  --teal-500: #009595; /* default  */
+  --teal-600: #007070; /* hover    */
+  --teal-800: #004a4a; /* pressed  */
 
-    --primary-bg2-default: #009595;
-    --primary-bg2-hover: #007070;
-    --primary-bg2-press: #004A4A;
-    --primary-bg2-disable: #99E3E3;
-  
-    /* Error */
-  
-    --error-bg2-default: #D61E20;
-    --error-bg2-hover: #AB181A;
-    --error-bg2-press: #801213;
-    --error-bg2-disable: #EFA5A6;
-  
-    /* Neutral */
-  
-    --neutral-bg1-default: #FFFFFF;
+  /* Red — danger scale */
+  --red-200: #efa5a6; /* disabled */
+  --red-500: #d61e20; /* default  */
+  --red-600: #ab181a; /* hover    */
+  --red-800: #801213; /* pressed  */
 
-    --neutral-st1-default: #7F7F7F;
-    --neutral-st1-disable: #7F7F7F;
-
-    --neutral-st2-default: #CCCCCC;
-    --neutral-st2-hover: #B3B3B3;
-    --neutral-st2-disable: #CCCCCC;
-
-    --neutral-fg1-default: #333333;
-    --neutral-fg1-disable: #CCCCCC;
-
-    --neutral-fg2-default: #999999;
-    --neutral-fg2-disable: #CCCCCC;
-
-    /* Primary - Foreground */
-
-    --primary-fg1-default: #009595;
-
-    /* Error - Foreground */
-
-    --error-fg1-default: #D61E20;
-  
-  }
+  /* Gray — neutral scale, ordered light → dark */
+  --gray-0: #ffffff;
+  --gray-100: #cccccc;
+  --gray-200: #b3b3b3;
+  --gray-300: #999999;
+  --gray-400: #7f7f7f; /* also used for the "readonly" border state */
+  --gray-700: #333333;
+  --gray-900: #191919;
+  --gray-1000: #000000;
+}

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button/Button";
+import { Field } from "@/components/ui/field";
 import { Icon } from "@/components/ui/icon/Icon";
 import { Input } from "@/components/ui/input";
 
@@ -115,7 +116,7 @@ export default function Home() {
 
           <Input
             placeholder="Active"
-            className="border-input-border-active ring-2 ring-input-border-active"
+            className="border-input-border-active ring-1 ring-input-border-active"
           />
 
           {/* Readonly */}
@@ -144,10 +145,6 @@ export default function Home() {
             rightAdornment={<Icon name="warning" size={18} />}
           />
 
-          {/* Loading */}
-
-          <Input placeholder="Loading..." loading />
-
           {/* Large */}
 
           <Input size="lg" placeholder="Large" />
@@ -159,6 +156,85 @@ export default function Home() {
           {/* Small */}
 
           <Input size="sm" placeholder="Small" />
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="mb-6 heading-md">Field</h2>
+
+        <div className="flex max-w-md flex-col gap-8">
+          {/* Default */}
+
+          <Field label="Email" helperText="We will never share your email">
+            <Input placeholder="Enter your email" />
+          </Field>
+
+          {/* Required */}
+
+          <Field label="Username" required>
+            <Input placeholder="Username" />
+          </Field>
+
+          {/* Filled */}
+
+          <Field label="Full name" helperText="Your public display name">
+            <Input defaultValue="Negar Rezaei" />
+          </Field>
+
+          {/* Error */}
+
+          <Field
+            label="Email"
+            error
+            errorMessage="Please enter a valid email address"
+          >
+            <Input placeholder="example@mail.com" error />
+          </Field>
+
+          {/* Required + Error */}
+
+          <Field
+            label="Password"
+            required
+            error
+            errorMessage="Password is required"
+          >
+            <Input type="password" error />
+          </Field>
+
+          {/* Disabled */}
+
+          <Field label="Disabled field" helperText="This field is disabled">
+            <Input placeholder="Disabled" disabled />
+          </Field>
+
+          {/* Readonly */}
+
+          <Field
+            label="Readonly field"
+            helperText="This value cannot be edited"
+          >
+            <Input defaultValue="Readonly value" readOnly />
+          </Field>
+
+          {/* With Left Adornment */}
+
+          <Field label="Search">
+            <Input
+              placeholder="Search..."
+              leftAdornment={<Icon name="warning" size={18} />}
+            />
+          </Field>
+
+          {/* With Right Adornment */}
+
+          <Field label="Password">
+            <Input
+              placeholder="Password"
+              type="password"
+              rightAdornment={<Icon name="warning" size={18} />}
+            />
+          </Field>
         </div>
       </section>
     </main>
