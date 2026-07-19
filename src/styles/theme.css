@@ -58,4 +58,28 @@
   --color-field-required: var(--field-required-fg);
   --color-field-helper: var(--field-helper-fg);
   --color-field-error: var(--field-error-fg);
+
+  /* Modal */
+
+  --color-modal-bg: var(--modal-bg);
+
+  --color-modal-overlay: var(--modal-overlay);
+
+  --color-modal-border: var(--modal-border);
+
+  --color-modal-title: var(--modal-title);
+
+  --color-modal-description: var(--modal-description);
+
+  --color-modal-body: var(--modal-body-text);
+
+  --color-modal-success-bg: var(--modal-success-bg);
+
+  --color-modal-success-icon: var(--modal-success-icon);
+
+  --color-modal-error-bg: var(--modal-error-bg);
+
+  --color-modal-error-icon: var(--modal-error-icon);
+
+  --radius-modal: var(--modal-radius);
 }

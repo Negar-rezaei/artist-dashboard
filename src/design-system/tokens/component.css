@@ -55,4 +55,36 @@
   --field-required-fg: var(--color-danger);
   --field-helper-fg: var(--color-text-secondary, var(--gray-300));
   --field-error-fg: var(--color-danger);
+
+  /* ======================
+   Modal
+====================== */
+
+  --modal-bg: var(--color-surface);
+
+  --modal-overlay: var(--color-overlay);
+
+  --modal-border: var(--color-border);
+
+  --modal-title: var(--color-text);
+
+  --modal-description: var(--color-text-secondary);
+
+  --modal-radius: 0.5rem;
+
+  /* Body */
+
+  --modal-body-text: var(--color-text);
+
+  /* Success State */
+
+  --modal-success-bg: var(--color-success-surface);
+
+  --modal-success-icon: var(--color-success);
+
+  /* Error State */
+
+  --modal-error-bg: var(--red-100, #fae4e4);
+
+  --modal-error-icon: var(--color-danger);
 }

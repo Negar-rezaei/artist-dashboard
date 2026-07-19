@@ -8,43 +8,65 @@
  */
 
 :root {
-  /* Brand */
+  /* ======================
+     Brand
+  ====================== */
+
   --color-brand: var(--teal-500);
+
   --color-brand-hover: var(--teal-600);
+
   --color-brand-pressed: var(--teal-800);
+
   --color-brand-disabled: var(--teal-200);
 
-  /* Danger */
+  /* ======================
+     Danger
+  ====================== */
+
   --color-danger: var(--red-500);
+
   --color-danger-hover: var(--red-600);
+
   --color-danger-pressed: var(--red-800);
+
   --color-danger-disabled: var(--red-200);
 
-  /* Surface */
+  /* ======================
+     Success
+  ====================== */
+
+  --color-success: var(--green-500);
+
+  --color-success-surface: var(--green-100);
+
+  /* ======================
+     Surface
+  ====================== */
+
   --color-surface: var(--gray-0);
 
-  /* Border */
+  --color-overlay: var(--black-alpha-40);
+
+  /* ======================
+     Border
+  ====================== */
+
   --color-border: var(--gray-100);
+
   --color-border-hover: var(--gray-200);
-  --color-border-pressed: var(--gray-300);
-  --color-border-disabled: var(--gray-100);
+
   --color-border-readonly: var(--gray-400);
-  --color-border-focus: var(--teal-500);
+
   --color-border-danger: var(--red-500);
 
-  /* Text */
+  /* ======================
+     Text
+  ====================== */
+
   --color-text: var(--gray-700);
-  --color-text-hover: var(--gray-900);
-  --color-text-pressed: var(--gray-1000);
-  --color-text-disabled: var(--gray-100);
-  --color-text-inverse: var(
-    --gray-0
-  ); /* text on filled brand/danger backgrounds */
 
-  /* Placeholder */
-  --color-placeholder: var(--gray-300);
-  --color-placeholder-disabled: var(--gray-100);
+  --color-text-secondary: var(--gray-400);
 
-  /* text */
-  --color-text-secondary: var(--gray-300);
+  --color-text-inverse: var(--gray-0);
 }

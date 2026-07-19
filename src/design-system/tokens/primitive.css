@@ -12,25 +12,41 @@
  */
 
 :root {
-  /* Teal — brand scale */
-  --teal-200: #99e3e3; /* disabled */
-  --teal-500: #009595; /* default  */
-  --teal-600: #007070; /* hover    */
-  --teal-800: #004a4a; /* pressed  */
+  /* Teal */
+  --teal-200: #99e3e3;
+  --teal-500: #009595;
+  --teal-600: #007070;
+  --teal-800: #004a4a;
 
-  /* Red — danger scale */
-  --red-200: #efa5a6; /* disabled */
-  --red-500: #d61e20; /* default  */
-  --red-600: #ab181a; /* hover    */
-  --red-800: #801213; /* pressed  */
+  /* Red */
+  --red-200: #efa5a6;
+  --red-500: #d61e20;
+  --red-600: #ab181a;
+  --red-800: #801213;
 
-  /* Gray — neutral scale, ordered light → dark */
+  /* Green */
+  --green-100: #e3f6e9;
+  --green-500: #17b24a;
+
+  /* Gray */
+
   --gray-0: #ffffff;
-  --gray-100: #cccccc;
-  --gray-200: #b3b3b3;
+
+  --gray-100: #e6e6e6;
+
+  --gray-200: #cccccc;
+
   --gray-300: #999999;
-  --gray-400: #7f7f7f; /* also used for the "readonly" border state */
+
+  --gray-400: #7f7f7f;
+
   --gray-700: #333333;
+
   --gray-900: #191919;
+
   --gray-1000: #000000;
+
+  /* Overlay */
+
+  --black-alpha-40: rgba(0, 0, 0, 0.4);
 }

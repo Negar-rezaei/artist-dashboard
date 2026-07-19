@@ -1,7 +1,16 @@
+"use client";
+
 import { Button } from "@/components/ui/button/Button";
 import { Field } from "@/components/ui/field";
 import { Icon } from "@/components/ui/icon/Icon";
 import { Input } from "@/components/ui/input";
+import {
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+} from "@/components/ui/modal";
+import { useState } from "react";
 
 const states = [
   {
@@ -19,8 +28,14 @@ const states = [
 ];
 
 export default function Home() {
+  const [defaultModalOpen, setDefaultModalOpen] = useState(false);
+
+  const [dangerModalOpen, setDangerModalOpen] = useState(false);
+
+  const [largeModalOpen, setLargeModalOpen] = useState(false);
+
   return (
-    <main className="min-h-screen bg-white p-10">
+    <main className="min-h-screen bg-modal-bg p-10">
       <div className="mx-auto flex max-w-5xl flex-col gap-12">
         {states.map(({ title, variant }) => (
           <section key={variant}>
@@ -236,6 +251,102 @@ export default function Home() {
             />
           </Field>
         </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="mb-6 heading-md">Modal</h2>
+
+        <div className="flex flex-wrap gap-4">
+          <Button onClick={() => setDefaultModalOpen(true)}>
+            Open Default Modal
+          </Button>
+
+          <Button variant="danger" onClick={() => setDangerModalOpen(true)}>
+            Open Danger Modal
+          </Button>
+
+          <Button variant="secondary" onClick={() => setLargeModalOpen(true)}>
+            Open Large Modal
+          </Button>
+        </div>
+
+        {/* Default Modal */}
+
+        <Modal
+          open={defaultModalOpen}
+          onOpenChange={setDefaultModalOpen}
+          size="sm"
+        >
+          <ModalHeader
+            title="Create project"
+            description="Add a new project to workspace"
+          />
+
+          <ModalBody>This is default modal content.</ModalBody>
+
+          <ModalFooter>
+            <Button
+              variant="secondary"
+              onClick={() => setDefaultModalOpen(false)}
+            >
+              Cancel
+            </Button>
+
+            <Button>Confirm</Button>
+          </ModalFooter>
+        </Modal>
+
+        {/* Danger Modal */}
+
+        <Modal
+          open={dangerModalOpen}
+          onOpenChange={setDangerModalOpen}
+          size="sm"
+          variant="danger"
+        >
+          <ModalHeader
+            title="Delete item"
+            description="This action cannot be undone"
+          />
+
+          <ModalBody icon={<Icon name="warning" size={56} />}>
+            Are you sure you want to delete this item?
+          </ModalBody>
+
+          <ModalFooter>
+            <Button
+              variant="secondary"
+              onClick={() => setDangerModalOpen(false)}
+            >
+              Cancel
+            </Button>
+
+            <Button variant="danger">Delete</Button>
+          </ModalFooter>
+        </Modal>
+
+        {/* Large Modal */}
+
+        <Modal open={largeModalOpen} onOpenChange={setLargeModalOpen} size="lg">
+          <ModalHeader title="Large Modal" description="Large content area" />
+
+          <ModalBody>
+            <div className="h-64 flex items-center justify-center bg-gray-50 rounded">
+              Large modal content
+            </div>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button
+              variant="secondary"
+              onClick={() => setLargeModalOpen(false)}
+            >
+              Close
+            </Button>
+
+            <Button>Save</Button>
+          </ModalFooter>
+        </Modal>
       </section>
     </main>
   );
