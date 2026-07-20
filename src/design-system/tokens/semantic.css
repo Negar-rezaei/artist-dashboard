@@ -219,4 +219,16 @@
   --z-toast: var(--z-toast);
 
   --z-tooltip: var(--z-tooltip);
+
+  /* ==========================================================================
+      link button
+      ========================================================================== */
+
+  --link-button: var(--blue-500);
+
+  --link-button-hover: var(--blue-600);
+
+  --link-button-active: var(--blue-700);
+
+  --link-button-disabled: var(--blue-200);
 }

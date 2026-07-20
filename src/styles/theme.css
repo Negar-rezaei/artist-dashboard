@@ -125,4 +125,13 @@
   --color-toast-error-text: var(--color-text-danger);
 
   --color-shadow-toast: var(--shadow-toast);
+
+  /* link-button */
+  --color-link-button: var(--link-button);
+
+  --color-link-button-hover: var(--link-button-hover);
+
+  --color-link-button-active: var(--link-button-active);
+
+  --color-link-button-disabled: var(--link-button-disabled);
 }

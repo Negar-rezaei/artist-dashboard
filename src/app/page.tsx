@@ -5,6 +5,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Field } from "@/components/ui/field";
 import { Icon } from "@/components/ui/icon/Icon";
 import { Input } from "@/components/ui/input";
+import { LinkButton } from "@/components/ui/link-button";
 import {
   Modal,
   ModalBody,
@@ -392,7 +393,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-12">
+      <section>
         <h2 className="mb-6 heading-md">Toast</h2>
         <Toast
           variant="success"
@@ -407,6 +408,32 @@ export default function Home() {
           description="Try again"
           icon={<Icon name="warning" size={16} />}
         />
+      </section>
+
+      <section className="mt-12">
+        <h2 className="mb-6 heading-md">Link Button</h2>
+
+        <div className="flex items-center gap-12">
+          <LinkButton href="#">Label</LinkButton>
+
+          <LinkButton
+            href="#"
+            className="pointer-events-none text-link-button-hover"
+          >
+            Label
+          </LinkButton>
+
+          <LinkButton
+            href="#"
+            className="pointer-events-none text-link-button-active"
+          >
+            Label
+          </LinkButton>
+
+          <LinkButton href="#" disabled>
+            Label
+          </LinkButton>
+        </div>
       </section>
     </main>
   );
