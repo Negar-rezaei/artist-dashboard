@@ -185,6 +185,8 @@
 
   --checkbox-gap: var(--space-2);
 
+  --checkbox-description: var(--color-text-secondary);
+
   /* ==========================================================================
      MODAL
      ========================================================================== */
@@ -218,4 +220,18 @@
   --modal-danger-text: var(--status-danger-text);
 
   --modal-danger-icon: var(--status-danger-text);
+
+  /* ==========================================================================
+       toast
+      ========================================================================== */
+
+  --toast-success-bg: var(--color-success-surface);
+
+  --toast-success-text: var(--color-text-success);
+
+  --toast-error-bg: var(--red-100);
+
+  --toast-error-text: var(--color-text-danger);
+
+  --shadow-toast: var(--shadow-xl);
 }

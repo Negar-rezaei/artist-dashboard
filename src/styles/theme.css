@@ -2,9 +2,6 @@
  * =============================================================
  * TAILWIND THEME REGISTRATION
  * =============================================================
- * The ONLY place (besides typography.css) allowed to use `@theme`.
- * This is the public utility-generation surface: every var declared
- * here becomes a Tailwind class (e.g. bg-button-primary).
  */
 
 @theme {
@@ -16,13 +13,19 @@
   --color-button-primary-fg: var(--button-primary-fg);
 
   /* Button - Secondary */
-  --color-button-secondary: var(--button-secondary-border);
-  --color-button-secondary-hover: var(--button-secondary-border-hover);
-  --color-button-secondary-pressed: var(--button-secondary-border-pressed);
-  --color-button-secondary-disabled: var(--button-secondary-border-disabled);
+  --color-button-secondary-bg: var(--button-secondary-bg);
+  --color-button-secondary-bg-hover: var(--button-secondary-bg-hover);
+  --color-button-secondary-bg-pressed: var(--button-secondary-bg-pressed);
+  --color-button-secondary-bg-disabled: var(--button-secondary-bg-disabled);
+  --color-button-secondary-border: var(--button-secondary-border);
+  --color-button-secondary-border-hover: var(--button-secondary-border-hover);
+  --color-button-secondary-border-pressed: var(
+    --button-secondary-border-pressed
+  );
+  --color-button-secondary-border-disabled: var(
+    --button-secondary-border-disabled
+  );
   --color-button-secondary-fg: var(--button-secondary-fg);
-  --color-button-secondary-fg-hover: var(--button-secondary-fg-hover);
-  --color-button-secondary-fg-pressed: var(--button-secondary-fg-pressed);
   --color-button-secondary-fg-disabled: var(--button-secondary-fg-disabled);
 
   /* Button - Danger */
@@ -35,51 +38,91 @@
   /* Input */
   --color-input-bg: var(--input-bg);
   --color-input-bg-disabled: var(--input-bg-disabled);
-
   --color-input-border: var(--input-border);
   --color-input-border-hover: var(--input-border-hover);
   --color-input-border-active: var(--input-border-active);
   --color-input-border-disabled: var(--input-border-disabled);
-  --color-input-border-readonly: var(--input-border-readonly);
   --color-input-border-error: var(--input-border-error);
-
-  --color-input-fg: var(--input-fg);
-  --color-input-fg-disabled: var(--input-fg-disabled);
-
+  --color-input-fg: var(--input-text);
+  --color-input-fg-disabled: var(--input-text-disabled);
   --color-input-placeholder: var(--input-placeholder);
   --color-input-placeholder-disabled: var(--input-placeholder-disabled);
 
+  --color-field-label: var(--field-label);
+  --color-field-required: var(--field-required);
+  --color-field-helper: var(--field-helper);
+  --color-field-error: var(--field-error);
+
+  /* Checkbox */
+  --color-checkbox-bg: var(--checkbox-bg);
+  --color-checkbox-border: var(--checkbox-border);
+  --color-checkbox-icon: var(--checkbox-icon);
+
+  --color-checkbox-bg-hover: var(--checkbox-bg-hover);
+  --color-checkbox-border-hover: var(--checkbox-border-hover);
+
+  --color-checkbox-bg-pressed: var(--checkbox-bg-pressed);
+  --color-checkbox-border-pressed: var(--checkbox-border-pressed);
+
+  --color-checkbox-bg-checked: var(--checkbox-bg-checked);
+  --color-checkbox-border-checked: var(--checkbox-border-checked);
+  --color-checkbox-icon-checked: var(--checkbox-icon-checked);
+
+  --color-checkbox-bg-checked-hover: var(--checkbox-bg-checked-hover);
+  --color-checkbox-border-checked-hover: var(--checkbox-border-checked-hover);
+
+  --color-checkbox-bg-checked-pressed: var(--checkbox-bg-checked-pressed);
+  --color-checkbox-border-checked-pressed: var(
+    --checkbox-border-checked-pressed
+  );
+
+  --color-checkbox-bg-disabled: var(--checkbox-bg-disabled);
+  --color-checkbox-border-disabled: var(--checkbox-border-disabled);
+  --color-checkbox-icon-disabled: var(--checkbox-icon-disabled);
+
+  --color-checkbox-bg-checked-disabled: var(--checkbox-bg-checked-disabled);
+  --color-checkbox-border-checked-disabled: var(
+    --checkbox-border-checked-disabled
+  );
+  --color-checkbox-icon-checked-disabled: var(--checkbox-icon-checked-disabled);
+
+  --color-checkbox-label: var(--checkbox-label);
+  --color-checkbox-label-disabled: var(--checkbox-label-disabled);
+  --color-checkbox-description: var(--checkbox-description);
+
+  --color-checkbox-focus-ring: var(--checkbox-focus-ring);
+
+  --radius-checkbox: var(--checkbox-radius);
+
   /* Radius */
-  --radius-button: 0.75rem; /* 12px */
-  --radius-input: 0.5rem; /* 8px  */
-
-  /* field */
-  --color-field-label: var(--field-label-fg);
-  --color-field-required: var(--field-required-fg);
-  --color-field-helper: var(--field-helper-fg);
-  --color-field-error: var(--field-error-fg);
-
-  /* Modal */
+  --radius-button: 0.75rem;
+  --radius-input: 0.5rem;
 
   --color-modal-bg: var(--modal-bg);
-
   --color-modal-overlay: var(--modal-overlay);
-
   --color-modal-border: var(--modal-border);
-
   --color-modal-title: var(--modal-title);
-
   --color-modal-description: var(--modal-description);
-
-  --color-modal-body: var(--modal-body-text);
+  --color-modal-body: var(--modal-body);
 
   --color-modal-success-bg: var(--modal-success-bg);
-
+  --color-modal-success-text: var(--modal-success-text);
   --color-modal-success-icon: var(--modal-success-icon);
 
-  --color-modal-error-bg: var(--modal-error-bg);
-
-  --color-modal-error-icon: var(--modal-error-icon);
+  --color-modal-danger-bg: var(--modal-danger-bg);
+  --color-modal-danger-text: var(--modal-danger-text);
+  --color-modal-danger-icon: var(--modal-danger-icon);
 
   --radius-modal: var(--modal-radius);
+
+  /* toast */
+  --color-toast-success-bg: var(--color-success-surface);
+
+  --color-toast-success-text: var(--color-text-success);
+
+  --color-toast-error-bg: var(--red-100);
+
+  --color-toast-error-text: var(--color-text-danger);
+
+  --color-shadow-toast: var(--shadow-toast);
 }

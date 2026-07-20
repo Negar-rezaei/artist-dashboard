@@ -176,12 +176,6 @@
 
   --font-weight-body: var(--font-weight-regular);
 
-  --font-weight-medium: var(--font-weight-medium);
-
-  --font-weight-semibold: var(--font-weight-semibold);
-
-  --font-weight-bold: var(--font-weight-bold);
-
   /* ==========================================================================
       RADIUS
       ========================================================================== */
@@ -202,13 +196,13 @@
       STATUS
       ========================================================================== */
 
-  --status-success-bg: var(--green-100);
+  --status-success-bg: var(--color-success-surface);
 
-  --status-success-text: var(--green-500);
+  --status-success-text: var(--color-text-success);
 
-  --status-success-border: var(--green-500);
+  --status-success-border: var(--color-border-success);
 
-  --status-danger-bg: var(--red-200);
+  --status-danger-bg: var(--color-danger-disabled);
 
   --status-danger-text: var(--red-500);
 

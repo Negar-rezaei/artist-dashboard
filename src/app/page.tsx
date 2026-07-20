@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button/Button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Field } from "@/components/ui/field";
 import { Icon } from "@/components/ui/icon/Icon";
 import { Input } from "@/components/ui/input";
@@ -10,6 +11,7 @@ import {
   ModalFooter,
   ModalHeader,
 } from "@/components/ui/modal";
+import { Toast } from "@/components/ui/toast";
 import { useState } from "react";
 
 const states = [
@@ -33,6 +35,8 @@ export default function Home() {
   const [dangerModalOpen, setDangerModalOpen] = useState(false);
 
   const [largeModalOpen, setLargeModalOpen] = useState(false);
+
+  const [checked, setChecked] = useState(true);
 
   return (
     <main className="min-h-screen bg-modal-bg p-10">
@@ -347,6 +351,62 @@ export default function Home() {
             <Button>Save</Button>
           </ModalFooter>
         </Modal>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="mb-6 heading-md">Checkbox</h2>
+
+        <div className="flex flex-col gap-8">
+          {/* Checked */}
+          <div className="flex items-center gap-6">
+            <Checkbox checked={checked} onCheckedChange={setChecked} />
+
+            <Checkbox defaultChecked className="pointer-events-none" />
+
+            <Checkbox defaultChecked className="pointer-events-none" />
+
+            <Checkbox defaultChecked disabled />
+          </div>
+
+          {/* Unchecked */}
+          <div className="flex items-center gap-6">
+            <Checkbox />
+
+            <Checkbox className="pointer-events-none" />
+
+            <Checkbox className="pointer-events-none" />
+
+            <Checkbox disabled />
+          </div>
+
+          {/* Indeterminate */}
+          <div className="flex items-center gap-6">
+            <Checkbox indeterminate />
+
+            <Checkbox indeterminate className="pointer-events-none" />
+
+            <Checkbox indeterminate className="pointer-events-none" />
+
+            <Checkbox indeterminate disabled />
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="mb-6 heading-md">Toast</h2>
+        <Toast
+          variant="success"
+          title="Saved"
+          description="Successfully"
+          className="mx-4"
+          icon={<Icon name="check" size={16} />}
+        />
+        <Toast
+          variant="error"
+          title="Failed"
+          description="Try again"
+          icon={<Icon name="warning" size={16} />}
+        />
       </section>
     </main>
   );
