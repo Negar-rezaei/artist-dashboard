@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button/Button";
 import { Checkbox } from "@/components/ui/checkbox";
+import { DropdownItem } from "@/components/ui/dropdown-item";
 import { Field } from "@/components/ui/field";
 import { Icon } from "@/components/ui/icon/Icon";
 import { Input } from "@/components/ui/input";
@@ -434,6 +435,19 @@ export default function Home() {
             Label
           </LinkButton>
         </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="mb-6 heading-md">Dropdown Item</h2>
+        <DropdownItem>Item</DropdownItem>
+        <DropdownItem className="pointer-events-none bg-dropdown-item-bg-hover text-dropdown-item-text-hover">
+          Item
+        </DropdownItem>
+        <DropdownItem className="pointer-events-none bg-dropdown-item-bg-active text-dropdown-item-text-active">
+          Item
+        </DropdownItem>
+        <DropdownItem loading>Saving...</DropdownItem>
+        <DropdownItem disabled>Item</DropdownItem>{" "}
       </section>
     </main>
   );

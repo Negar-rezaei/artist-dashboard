@@ -234,4 +234,22 @@
   --toast-error-text: var(--color-text-danger);
 
   --shadow-toast: var(--shadow-xl);
+
+  /* ==========================================================================
+       dropdown
+      ========================================================================== */
+
+  --dropdown-item-bg: var(--color-surface-primary);
+  
+  --dropdown-item-bg-hover: var(--gray-50);
+
+  --dropdown-item-bg-active: var(--gray-100);
+
+  --dropdown-item-text: var(--gray-700);
+
+  --dropdown-item-text-hover: var(--gray-800);
+
+  --dropdown-item-text-active: var(--gray-900);
+
+  --dropdown-item-text-disabled: var(--gray-300);
 }

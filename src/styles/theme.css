@@ -134,4 +134,19 @@
   --color-link-button-active: var(--link-button-active);
 
   --color-link-button-disabled: var(--link-button-disabled);
+
+  /* dropdown */
+  --color-dropdown-item-bg: var(--dropdown-item-bg);
+
+  --color-dropdown-item-bg-hover: var(--dropdown-item-bg-hover);
+
+  --color-dropdown-item-bg-active: var(--dropdown-item-bg-active);
+
+  --color-dropdown-item-text: var(--dropdown-item-text);
+
+  --color-dropdown-item-text-hover: var(--dropdown-item-text-hover);
+
+  --color-dropdown-item-text-active: var(--dropdown-item-text-active);
+
+  --color-dropdown-item-text-disabled: var(--dropdown-item-text-disabled);
 }
