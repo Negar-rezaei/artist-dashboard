@@ -1,38 +1,42 @@
 /**
- * =============================================================
+ * =============================================================================
  * PRIMITIVE TOKENS
- * =============================================================
- * Raw, context-free values — no usage decisions live here.
- * Rules:
- *  - Plain `:root` (NOT `@theme`) on purpose: Tailwind must not
- *    generate utility classes from raw palette values. This forces
- *    every consumer through semantic.css instead of e.g. `bg-teal-500`
- *    showing up ad-hoc in JSX.
- *  - Only semantic.css may reference these variables.
+ * =============================================================================
  */
 
 :root {
-  /* Teal */
+  /* ==========================================================================
+     COLORS
+     ========================================================================== */
+
+  /* Brand */
+
   --teal-200: #99e3e3;
   --teal-500: #009595;
   --teal-600: #007070;
   --teal-800: #004a4a;
 
-  /* Red */
+  /* Danger */
+
   --red-200: #efa5a6;
   --red-500: #d61e20;
   --red-600: #ab181a;
   --red-800: #801213;
 
-  /* Green */
+  /* Success */
+
   --green-100: #e3f6e9;
   --green-500: #17b24a;
 
-  /* Gray */
+  /* Neutral */
 
   --gray-0: #ffffff;
 
+  --gray-50: #f7f7f7;
+  --gray-75: #f0f0f0;
+
   --gray-100: #e6e6e6;
+  --gray-150: #d9d9d9;
 
   --gray-200: #cccccc;
 
@@ -40,13 +44,236 @@
 
   --gray-400: #7f7f7f;
 
+  --gray-500: #666666;
+
+  --gray-600: #4c4c4c;
+
   --gray-700: #333333;
+
+  --gray-800: #262626;
 
   --gray-900: #191919;
 
   --gray-1000: #000000;
 
-  /* Overlay */
+  /* Alpha */
 
+  --black-alpha-10: rgba(0, 0, 0, 0.1);
+  --black-alpha-20: rgba(0, 0, 0, 0.2);
+  --black-alpha-30: rgba(0, 0, 0, 0.3);
   --black-alpha-40: rgba(0, 0, 0, 0.4);
+  --black-alpha-60: rgba(0, 0, 0, 0.6);
+
+  /* ==========================================================================
+     SPACING
+     ========================================================================== */
+
+  --space-0: 0;
+
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 6px;
+  --space-4: 8px;
+  --space-5: 10px;
+  --space-6: 12px;
+
+  --space-8: 16px;
+  --space-10: 20px;
+  --space-12: 24px;
+  --space-14: 28px;
+  --space-16: 32px;
+  --space-20: 40px;
+  --space-24: 48px;
+  --space-32: 64px;
+
+  /* ==========================================================================
+     SIZE
+     ========================================================================== */
+
+  --size-0: 0;
+
+  --size-2: 2px;
+  --size-4: 4px;
+  --size-8: 8px;
+
+  --size-10: 10px;
+
+  --size-12: 12px;
+  --size-14: 14px;
+  --size-16: 16px;
+
+  --size-18: 18px;
+  --size-20: 20px;
+  --size-24: 24px;
+
+  --size-28: 28px;
+  --size-32: 32px;
+  --size-36: 36px;
+  --size-40: 40px;
+
+  --size-44: 44px;
+  --size-48: 48px;
+  --size-56: 56px;
+  --size-64: 64px;
+
+  /* ==========================================================================
+     BORDER
+     ========================================================================== */
+
+  --border-width-0: 0;
+
+  --border-width-1: 1px;
+
+  --border-width-2: 2px;
+
+  --border-width-4: 4px;
+
+  /* ==========================================================================
+     RADIUS
+     ========================================================================== */
+
+  --radius-none: 0;
+
+  --radius-xs: 2px;
+
+  --radius-sm: 4px;
+
+  --radius-md: 6px;
+
+  --radius-lg: 8px;
+
+  --radius-xl: 12px;
+
+  --radius-2xl: 16px;
+
+  --radius-full: 9999px;
+
+  /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+
+  /* Font Family */
+
+  --font-family-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+
+  --font-family-mono: ui-monospace, SFMono-Regular, monospace;
+
+  /* Font Weight */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Font Size */
+
+  --font-size-10: 10px;
+
+  --font-size-12: 12px;
+
+  --font-size-14: 14px;
+
+  --font-size-16: 16px;
+
+  --font-size-18: 18px;
+
+  --font-size-20: 20px;
+
+  --font-size-24: 24px;
+
+  --font-size-30: 30px;
+
+  --font-size-36: 36px;
+
+  --font-size-48: 48px;
+
+  /* Line Height */
+
+  --line-height-12: 12px;
+
+  --line-height-16: 16px;
+
+  --line-height-20: 20px;
+
+  --line-height-24: 24px;
+
+  --line-height-28: 28px;
+
+  --line-height-32: 32px;
+
+  --line-height-36: 36px;
+
+  --line-height-40: 40px;
+
+  --line-height-56: 56px;
+
+  /* Letter Spacing */
+
+  --tracking-tight: -0.02em;
+
+  --tracking-normal: 0;
+
+  --tracking-wide: 0.02em;
+
+  /* ==========================================================================
+     OPACITY
+     ========================================================================== */
+
+  --opacity-0: 0;
+
+  --opacity-25: 0.25;
+
+  --opacity-50: 0.5;
+
+  --opacity-75: 0.75;
+
+  --opacity-100: 1;
+
+  /* ==========================================================================
+     SHADOW
+     ========================================================================== */
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+
+  /* ==========================================================================
+     MOTION
+     ========================================================================== */
+
+  --duration-fast: 120ms;
+
+  --duration-normal: 180ms;
+
+  --duration-slow: 240ms;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --ease-emphasized: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* ==========================================================================
+     Z INDEX
+     ========================================================================== */
+
+  --z-base: 0;
+
+  --z-dropdown: 1000;
+
+  --z-sticky: 1100;
+
+  --z-fixed: 1200;
+
+  --z-modal-backdrop: 1300;
+
+  --z-modal: 1400;
+
+  --z-popover: 1500;
+
+  --z-toast: 1600;
+
+  --z-tooltip: 1700;
 }

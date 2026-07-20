@@ -1,90 +1,221 @@
 /**
- * =============================================================
+ * =============================================================================
  * COMPONENT TOKENS
- * =============================================================
- * Component-scoped aliases of semantic tokens.
- * Naming: --{component}-{part}-{state} (bare name = default state).
- * A component should only ever read from here.
+ * =============================================================================
+
  */
 
 :root {
-  /* ---------- Button / Primary ---------- */
+  /* ==========================================================================
+     BUTTON / PRIMARY
+     ========================================================================== */
+
   --button-primary-bg: var(--color-brand);
   --button-primary-bg-hover: var(--color-brand-hover);
   --button-primary-bg-pressed: var(--color-brand-pressed);
   --button-primary-bg-disabled: var(--color-brand-disabled);
+
   --button-primary-fg: var(--color-text-inverse);
 
-  /* ---------- Button / Secondary ---------- */
-  --button-secondary-border: var(--color-border);
+  /* ==========================================================================
+     BUTTON / SECONDARY
+     ========================================================================== */
+
+  --button-secondary-bg: var(--color-surface-primary);
+
+  --button-secondary-bg-hover: var(--color-surface-hover);
+
+  --button-secondary-bg-pressed: var(--color-surface-pressed);
+
+  --button-secondary-bg-disabled: var(--color-surface-disabled);
+
+  --button-secondary-border: var(--color-border-primary);
+
   --button-secondary-border-hover: var(--color-border-hover);
+
   --button-secondary-border-pressed: var(--color-border-pressed);
+
   --button-secondary-border-disabled: var(--color-border-disabled);
 
-  --button-secondary-fg: var(--color-text);
-  --button-secondary-fg-hover: var(--color-text-hover);
-  --button-secondary-fg-pressed: var(--color-text-pressed);
+  --button-secondary-fg: var(--color-text-primary);
+
   --button-secondary-fg-disabled: var(--color-text-disabled);
 
-  /* ---------- Button / Danger ---------- */
+  /* ==========================================================================
+     BUTTON / DANGER
+     ========================================================================== */
+
   --button-danger-bg: var(--color-danger);
+
   --button-danger-bg-hover: var(--color-danger-hover);
+
   --button-danger-bg-pressed: var(--color-danger-pressed);
+
   --button-danger-bg-disabled: var(--color-danger-disabled);
+
   --button-danger-fg: var(--color-text-inverse);
 
-  /* ---------- Input ---------- */
-  --input-bg: var(--color-surface);
-  --input-bg-disabled: var(--color-surface);
+  /* ==========================================================================
+     INPUT
+     ========================================================================== */
 
-  --input-border: var(--color-border);
+  --input-bg: var(--color-surface-primary);
+
+  --input-bg-disabled: var(--color-surface-disabled);
+
+  --input-border: var(--color-border-primary);
+
   --input-border-hover: var(--color-border-hover);
-  --input-border-active: var(--color-border-focus);
+
+  --input-border-active: var(--color-focus-ring);
+
   --input-border-disabled: var(--color-border-disabled);
-  --input-border-readonly: var(--color-border-readonly);
+
   --input-border-error: var(--color-border-danger);
 
-  --input-fg: var(--color-text);
-  --input-fg-disabled: var(--color-text-disabled);
+  --input-text: var(--color-text-primary);
 
-  --input-placeholder: var(--color-placeholder);
-  --input-placeholder-disabled: var(--color-placeholder-disabled);
+  --input-text-disabled: var(--color-text-disabled);
 
-  /* ---------- Field ---------- */
-  --field-label-fg: var(--color-text);
-  --field-required-fg: var(--color-danger);
-  --field-helper-fg: var(--color-text-secondary, var(--gray-300));
-  --field-error-fg: var(--color-danger);
+  --input-placeholder: var(--color-text-placeholder);
 
-  /* ======================
-   Modal
-====================== */
+  --input-placeholder-disabled: var(--color-text-disabled);
 
-  --modal-bg: var(--color-surface);
+  /* ==========================================================================
+     FIELD
+     ========================================================================== */
+
+  --field-label: var(--color-text-primary);
+
+  --field-required: var(--color-danger);
+
+  --field-helper: var(--color-text-secondary);
+
+  --field-error: var(--color-danger);
+
+  /* ==========================================================================
+     CHECKBOX
+     ========================================================================== */
+
+  /* Size */
+
+  --checkbox-size: var(--size-16);
+
+  --checkbox-hit-area: var(--size-24);
+
+  --checkbox-icon-size: var(--size-12);
+
+  /* Radius */
+
+  --checkbox-radius: var(--radius-checkbox);
+
+  /* Border */
+
+  --checkbox-border-width: var(--border-width-2);
+
+  /* Default */
+
+  --checkbox-bg: var(--color-surface-primary);
+
+  --checkbox-border: var(--color-border-pressed);
+
+  --checkbox-icon: transparent;
+
+  /* Hover */
+
+  --checkbox-bg-hover: var(--color-surface-hover);
+
+  --checkbox-border-hover: var(--color-border-hover);
+
+  /* Pressed */
+
+  --checkbox-bg-pressed: var(--color-surface-pressed);
+
+  --checkbox-border-pressed: var(--color-border-pressed);
+
+  /* Checked */
+
+  --checkbox-bg-checked: var(--color-brand);
+
+  --checkbox-border-checked: var(--color-brand);
+
+  --checkbox-icon-checked: var(--color-icon-inverse);
+
+  /* Checked Hover */
+
+  --checkbox-bg-checked-hover: var(--color-brand-hover);
+
+  --checkbox-border-checked-hover: var(--color-brand-hover);
+
+  /* Checked Pressed */
+
+  --checkbox-bg-checked-pressed: var(--color-brand-pressed);
+
+  --checkbox-border-checked-pressed: var(--color-brand-pressed);
+
+  /* Disabled */
+
+  --checkbox-bg-disabled: var(--color-surface-disabled);
+
+  --checkbox-border-disabled: var(--color-border-disabled);
+
+  --checkbox-icon-disabled: transparent;
+
+  /* Checked Disabled */
+
+  --checkbox-bg-checked-disabled: var(--color-brand-disabled);
+
+  --checkbox-border-checked-disabled: var(--color-brand-disabled);
+
+  --checkbox-icon-checked-disabled: var(--color-icon-inverse);
+
+  /* Focus */
+
+  --checkbox-focus-ring: var(--color-focus-ring);
+
+  --checkbox-focus-ring-width: var(--border-width-2);
+
+  --checkbox-focus-ring-offset: var(--space-1);
+
+  /* Label */
+
+  --checkbox-label: var(--color-text-primary);
+
+  --checkbox-label-disabled: var(--color-text-disabled);
+
+  --checkbox-gap: var(--space-2);
+
+  /* ==========================================================================
+     MODAL
+     ========================================================================== */
+
+  --modal-bg: var(--color-surface-primary);
 
   --modal-overlay: var(--color-overlay);
 
-  --modal-border: var(--color-border);
+  --modal-border: var(--color-border-primary);
 
-  --modal-title: var(--color-text);
+  --modal-title: var(--color-text-primary);
 
   --modal-description: var(--color-text-secondary);
 
-  --modal-radius: 0.5rem;
+  --modal-body: var(--color-text-primary);
 
-  /* Body */
+  --modal-radius: var(--radius-overlay);
 
-  --modal-body-text: var(--color-text);
+  /* Success */
 
-  /* Success State */
+  --modal-success-bg: var(--status-success-bg);
 
-  --modal-success-bg: var(--color-success-surface);
+  --modal-success-text: var(--status-success-text);
 
-  --modal-success-icon: var(--color-success);
+  --modal-success-icon: var(--status-success-text);
 
-  /* Error State */
+  /* Danger */
 
-  --modal-error-bg: var(--red-100, #fae4e4);
+  --modal-danger-bg: var(--status-danger-bg);
 
-  --modal-error-icon: var(--color-danger);
+  --modal-danger-text: var(--status-danger-text);
+
+  --modal-danger-icon: var(--status-danger-text);
 }

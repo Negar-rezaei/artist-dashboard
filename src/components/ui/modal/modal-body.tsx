@@ -15,7 +15,7 @@ export function ModalBody({
     <section className="flex flex-col items-center gap-4 bg-modal-bg p-6">
       {icon}
 
-      <p className="body-md text-center text-text">{children}</p>
+      <div className="body-md text-center text-text">{children}</div>
     </section>
   );
 }
