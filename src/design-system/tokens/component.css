@@ -249,7 +249,7 @@
 
   --dropdown-item-text-hover: var(--gray-800);
 
-  --dropdown-item-text-active: var(--gray-900);
+  --dropdown-item-text-active: var(--color-text-hover);
 
   --dropdown-item-text-disabled: var(--gray-300);
 
@@ -276,4 +276,24 @@
   --pagination-button-disabled: var(--color-text-placeholder);
 
   --pagination-button-active-text: var(--color-surface-primary);
+
+  /* ==========================================================================
+       Sidebar Menu
+      ========================================================================== */
+
+  --sidebar-menu-bg: var(--color-surface-primary);
+  --sidebar-menu-bg-hover: var(--color-surface-pressed);
+  --sidebar-menu-bg-pressed: var(--color-surface-pressed);
+
+  --sidebar-menu-bg-selected: var(--color-brand-soft);
+  --sidebar-menu-bg-selected-hover: var(--color-brand-soft-hover);
+
+  --sidebar-menu-text: var(--color-text-primary);
+  --sidebar-menu-text-hover: var(--color-text-hover);
+  --sidebar-menu-text-pressed: var(--color-text-pressed);
+
+  --sidebar-menu-text-selected: var(--color-text-brand);
+  --sidebar-menu-text-selected-hover: var(--color-brand-hover);
+
+  --sidebar-menu-subtitle: var(--color-text-primary);
 }

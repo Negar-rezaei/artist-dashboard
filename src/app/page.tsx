@@ -14,6 +14,7 @@ import {
   ModalHeader,
 } from "@/components/ui/modal";
 import { Pagination } from "@/components/ui/pagination";
+import { SidebarMenuItem } from "@/components/ui/sidebar-menu-item";
 import { Toast } from "@/components/ui/toast";
 import { useState } from "react";
 
@@ -464,6 +465,38 @@ export default function Home() {
           {/* Disabled */}
 
           <Pagination page={10} totalPages={20} disabled />
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="mb-6 heading-md">Sidebar Menu Item</h2>
+        <div className="flex w-64 flex-col gap-3 border border-dashed border-violet-400 p-5">
+          <SidebarMenuItem title="Title" />
+
+          <SidebarMenuItem
+            title="Title"
+            className="pointer-events-none bg-sidebar-menu-bg-hover text-sidebar-menu-text-hover"
+          />
+
+          <SidebarMenuItem
+            title="Title"
+            className="pointer-events-none bg-sidebar-menu-bg-pressed text-sidebar-menu-text-hover"
+          />
+
+          <SidebarMenuItem title="Title" selected />
+
+          <SidebarMenuItem
+            title="Title"
+            selected
+            className="pointer-events-none bg-sidebar-menu-bg-selected-hover text-sidebar-menu-text-hover"
+          />
+        </div>
+
+        <div className="border-l border-border-primary pl-4 mt-5">
+          <div className="flex w-64 flex-col gap-1">
+            <SidebarMenuItem title="Title" selected />
+            <SidebarMenuItem title="Title" />
+          </div>
         </div>
       </section>
     </main>
