@@ -19,7 +19,8 @@ export function DashboardSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 bg-sidebar-menu-bg px-4 py-6">
+    <aside className="xl:w-64 shrink-0 bg-sidebar-menu-bg lg:px-4 px-2 py-6">
+      {" "}
       <nav className="flex flex-col gap-2">
         {navigation.map((item) => {
           return (

@@ -12,27 +12,27 @@ export function PostsTable({ posts, onDeleted }: PostsTableProps) {
         <table className="min-w-full">
           <thead className="border-b border-border-primary bg-table-header-bg">
             <tr>
-              <th className="px-4 py-3 text-left text-sm font-medium text-text-primary">
+              <th className="px-4 py-3 text-left lg:text-sm text-xs font-medium text-text-primary">
                 #
               </th>
 
-              <th className="px-4 py-3 text-left text-sm font-medium text-text-primary">
+              <th className="px-4 py-3 text-left lg:text-sm text-xs font-medium text-text-primary">
                 Title
               </th>
 
-              <th className="px-4 py-3 text-left text-sm font-medium text-text-primary">
+              <th className="px-4 py-3 text-left lg:text-sm text-xs font-medium text-text-primary">
                 Author
               </th>
 
-              <th className="px-4 py-3 text-left text-sm font-medium text-text-primary">
+              <th className="px-4 py-3 text-left lg:text-sm text-xs font-medium text-text-primary">
                 Tags
               </th>
 
-              <th className="px-4 py-3 text-left text-sm font-medium text-text-primary">
+              <th className="px-4 py-3 text-left lg:text-sm text-xs font-medium text-text-primary">
                 Views
               </th>
 
-              <th className="px-4 py-3 text-left text-sm font-medium text-text-primary">
+              <th className="px-4 py-3 text-left lg:text-sm text-xs font-medium text-text-primary">
                 Reactions
               </th>
 
@@ -43,19 +43,19 @@ export function PostsTable({ posts, onDeleted }: PostsTableProps) {
           <tbody>
             {posts.map((post, index) => (
               <tr key={post.id} className="border-b border-border-primary ">
-                <td className="px-4 py-4 text-sm text-text-primary">
+                <td className="px-4 py-4 lg:text-sm text-xs text-text-primary">
                   <span className="bg-table-index-bg p-2 rounded">
                     {index + 1}
                   </span>
                 </td>
 
-                <td className="max-w-xs px-4 py-4">
-                  <p className="truncate text-sm font-medium text-text-primary">
+                <td className="max-w-xs lg:p-4 p-2">
+                  <p className="truncate lg:text-sm text-xs font-medium text-text-primary">
                     {post.title}
                   </p>
                 </td>
 
-                <td className="px-4 py-4 text-sm text-text-primary">
+                <td className="px-4 py-4 lg:text-sm text-xs text-text-primary">
                   {post.author ?? `User ${post.userId}`}
                 </td>
 
@@ -72,18 +72,18 @@ export function PostsTable({ posts, onDeleted }: PostsTableProps) {
                   </div>
                 </td>
 
-                <td className="px-4 py-4 text-sm text-text-primary">
+                <td className="px-4 py-4 lg:text-sm text-xs text-text-primary">
                   {post.views}
                 </td>
 
                 <td className="px-4 py-4">
                   <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-1.5 rounded-full bg-green-50 px-3 py-1 text-sm text-green-600">
+                    <div className="flex items-center gap-1.5 rounded-full bg-green-50 px-3 py-1 lg:text-sm text-xs text-green-600">
                       <span>👍</span>
                       <span>{post.reactions.likes}</span>
                     </div>
 
-                    <div className="flex items-center gap-1.5 rounded-full bg-red-50 px-3 py-1 text-sm text-red-500">
+                    <div className="flex items-center gap-1.5 rounded-full bg-red-50 px-3 py-1 lg:text-sm text-xs text-red-500">
                       <span>👎</span>
                       <span>{post.reactions.dislikes}</span>
                     </div>

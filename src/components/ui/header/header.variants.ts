@@ -26,6 +26,8 @@ export const headerPreviewVariants = cva([
   "rounded",
   "bg-header-preview-bg",
   "px-3",
+  "hidden",
+  "sm:block",
   "py-2",
   "body-lg-strong",
   "text-header-text",

@@ -72,7 +72,7 @@ export function PostForm({ tags, post }: PostFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-6 lg:grid-cols-3">
-      <div className="lg:col-span-2">
+      <div className="lg:col-span-2 lg:order-1 order-2">
         <Section title={post ? "Update Post" : "Create Post"}>
           <div className="space-y-6">
             <Field label="Title">
@@ -94,7 +94,7 @@ export function PostForm({ tags, post }: PostFormProps) {
         </Section>
       </div>
 
-      <Section>
+      <Section className="lg:order-2 order-1">
         <PostTags tags={tags} value={selectedTags} onChange={setSelectedTags} />
       </Section>
     </form>

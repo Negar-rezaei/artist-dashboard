@@ -13,6 +13,7 @@ import {
 
 import { useLocalStorageUser } from "@/hooks/useLocalStorage";
 import { useLogout } from "@/hooks/useLogout";
+import { Icon } from "@/components/ui/icon";
 
 export function DashboardHeader() {
   const { logout } = useLogout();
@@ -25,7 +26,7 @@ export function DashboardHeader() {
     <>
       <Header
         leading={
-          <span className="body-md">
+          <span className="lg:body-md">
             Welcome{" "}
             <span className="body-md-strong">{user?.username ?? "User"}</span>{" "}
             👋
@@ -33,9 +34,26 @@ export function DashboardHeader() {
         }
         title="ArvanCloud Challenge"
         trailing={
-          <Button variant="secondary" onClick={() => setLogoutModalOpen(true)}>
-            Logout
-          </Button>
+          <>
+            {/* Desktop */}
+            <Button
+              variant="secondary"
+              onClick={() => setLogoutModalOpen(true)}
+              className="hidden sm:flex"
+            >
+              Logout
+            </Button>
+
+            {/* Mobile */}
+            <Button
+              variant="secondary"
+              onClick={() => setLogoutModalOpen(true)}
+              className="flex sm:hidden"
+              aria-label="Logout"
+            >
+              <Icon name="logout" size={24} />
+            </Button>
+          </>
         }
       />
 

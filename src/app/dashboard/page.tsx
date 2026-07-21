@@ -7,7 +7,7 @@ const posts = await getPosts();
 export default function DashboardPage() {
   return (
     <div className="space-y-6">
-      <Section title="Posts">
+      <Section title="Posts" className="min-w-0 flex-1">
         <PostsTableContainer posts={posts} />
       </Section>
     </div>
