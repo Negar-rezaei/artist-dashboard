@@ -11,26 +11,15 @@ export const headerVariants = cva([
   "py-3",
 ]);
 
-export const headerInfoVariants = cva([
-  "flex",
-  "items-center",
-  "gap-0.5",
-  "shrink-0",
-]);
+export const headerInfoVariants = cva(["flex", "items-center", "gap-0.5"]);
 
-export const headerLeadingVariants = cva([
-  "flex",
-  "flex-1",
-  "justify-center",
-  "px-4",
-]);
+export const headerLeadingVariants = cva(["flex", "justify-center", "px-4"]);
 
 export const headerTrailingVariants = cva([
   "flex",
   "items-center",
   "justify-end",
   "gap-2",
-  "shrink-0",
 ]);
 
 export const headerPreviewVariants = cva([

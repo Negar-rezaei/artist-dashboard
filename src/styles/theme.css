@@ -204,4 +204,8 @@
   --color-header-text: var(--color-text-primary);
 
   --color-header-preview-bg: var(--color-surface-secondary);
+
+  /* table */
+  --color-table-header-bg: var(--color-surface-secondary);
+  --color-table-index-bg: var(--color-surface-pressed);
 }

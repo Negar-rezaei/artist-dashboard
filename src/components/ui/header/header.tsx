@@ -1,7 +1,7 @@
 import { HeaderProps } from "./header.types";
 import {
-  headerInfoVariants,
   headerLeadingVariants,
+  headerPreviewVariants,
   headerTrailingVariants,
   headerVariants,
 } from "./header.variants";
@@ -9,12 +9,12 @@ import {
 export function Header({ title, value, leading, trailing }: HeaderProps) {
   return (
     <header className={headerVariants()}>
-      <div className={headerInfoVariants()}>
+      {leading && <div className={headerLeadingVariants()}>{leading}</div>}
+
+      <div className={headerPreviewVariants()}>
         {title}
         {value}
       </div>
-
-      {leading && <div className={headerLeadingVariants()}>{leading}</div>}
 
       {trailing && <div className={headerTrailingVariants()}>{trailing}</div>}
     </header>

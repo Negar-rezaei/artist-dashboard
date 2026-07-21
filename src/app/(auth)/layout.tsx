@@ -9,5 +9,6 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
     <main className="min-h-screen flex items-center justify-center">
       {children}
     </main>
+    
   );
 }

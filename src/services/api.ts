@@ -6,11 +6,17 @@ interface ApiConfig extends RequestInit {
 
 export async function api<T>({ path, ...options }: ApiConfig): Promise<T> {
   const response = await fetch(`${BASE_URL}${path}`, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+
     ...options,
   });
 
   if (!response.ok) {
-    throw new Error("API Error");
+    const error = await response.json().catch(() => null);
+
+    throw new Error(error?.message ?? "API request failed");
   }
 
   return response.json();
