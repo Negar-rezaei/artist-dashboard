@@ -1,14 +1,11 @@
-import { HTMLAttributes, ReactNode } from "react";
-import { VariantProps } from "class-variance-authority";
+import { ComponentPropsWithoutRef } from "react";
 
-import { sidebarMenuItemVariants } from "./sidebar-menu-item.variants";
-
-export interface SidebarMenuItemProps
-  extends HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof sidebarMenuItemVariants> {
+export interface SidebarMenuItemProps extends ComponentPropsWithoutRef<"div"> {
   title: string;
   subtitle?: string;
-
-  startAdornment?: ReactNode;
-  endAdornment?: ReactNode;
+  href?: string;
+  startAdornment?: React.ReactNode;
+  endAdornment?: React.ReactNode;
+  state?: "default" | "hover" | "pressed";
+  selected?: boolean;
 }

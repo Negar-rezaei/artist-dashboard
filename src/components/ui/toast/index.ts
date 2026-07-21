@@ -1,2 +1,2 @@
-export * from "./toast";
-export * from "./toast.types";
+export { Toast } from "./toast";
+export { ToastProvider, useToast } from "./toast-provider";

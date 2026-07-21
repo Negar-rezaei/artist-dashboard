@@ -6,6 +6,7 @@ w-full
 rounded-input
 
 border
+border-border-primary
 
 bg-input-bg
 

@@ -20,13 +20,15 @@ export const Toast = forwardRef<HTMLDivElement, ToastProps>(
         className={cn(toastVariants({ variant }), className)}
         {...props}
       >
-        <div className="flex items-center gap-4">
+        <div className="flex items-start gap-3">
           {icon}
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <span className="body-md-strong">{title}</span>
 
-            {description && <span className="caption">{description}</span>}
+            {description && (
+              <span className="caption text-text-secondary">{description}</span>
+            )}
           </div>
         </div>
       </div>
