@@ -127,7 +127,7 @@
 
   --color-toast-success-text: var(--color-text-success);
 
-  --color-toast-error-bg: var(--red-100);
+  --color-toast-error-bg: var(--toast-error-bg);
 
   --color-toast-error-text: var(--color-text-danger);
 

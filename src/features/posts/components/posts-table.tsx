@@ -1,10 +1,11 @@
 import { Post } from "@/types/posts.types";
+import { PostActions } from "./post-actions";
 
 interface PostsTableProps {
   posts: Post[];
+  onDeleted?: () => void;
 }
-
-export function PostsTable({ posts }: PostsTableProps) {
+export function PostsTable({ posts, onDeleted }: PostsTableProps) {
   return (
     <section className="w-full">
       <div className="overflow-x-auto">
@@ -34,6 +35,8 @@ export function PostsTable({ posts }: PostsTableProps) {
               <th className="px-4 py-3 text-left text-sm font-medium text-text-primary">
                 Reactions
               </th>
+
+              <th className="px-4 py-3"></th>
             </tr>
           </thead>
 
@@ -77,6 +80,10 @@ export function PostsTable({ posts }: PostsTableProps) {
                   👍 {post.reactions.likes}
                   <span className="mx-2 text-text-secondary">|</span>
                   👎 {post.reactions.dislikes}
+                </td>
+
+                <td className="px-4 py-4">
+                  <PostActions post={post} onDeleted={onDeleted} />
                 </td>
               </tr>
             ))}
