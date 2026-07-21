@@ -38,17 +38,17 @@ export const buttonVariants = cva(base, {
         disabled:bg-button-primary-disabled
         `,
       secondary: `
-       border-button-secondary
+       border-button-secondary-border
 
        text-button-secondary-fg
 
-       hover:border-button-secondary-hover
+       hover:hover:border-button-secondary-border-hover
        hover:text-button-secondary-fg-hover
 
-       active:border-button-secondary-pressed
+       active:border-button-secondary-border-pressed
        active:text-button-secondary-fg-pressed
 
-       disabled:border-button-secondary-disabled
+       disabled:border-button-secondary-border-disabled
        disabled:text-button-secondary-fg-disabled
         `,
       danger: `

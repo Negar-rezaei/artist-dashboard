@@ -296,4 +296,16 @@
   --sidebar-menu-text-selected-hover: var(--color-brand-hover);
 
   --sidebar-menu-subtitle: var(--color-text-primary);
+
+  /* ==========================================================================
+       Header
+      ========================================================================== */
+
+  --header-bg: var(--color-surface-primary);
+
+  --header-border: var(--color-border-primary);
+
+  --header-text: var(--color-text-primary);
+
+  --header-preview-bg: var(--color-surface-secondary);
 }

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button/Button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { DropdownItem } from "@/components/ui/dropdown-item";
 import { Field } from "@/components/ui/field";
+import { Header } from "@/components/ui/header";
 import { Icon } from "@/components/ui/icon/Icon";
 import { Input } from "@/components/ui/input";
 import { LinkButton } from "@/components/ui/link-button";
@@ -468,7 +469,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-12">
+      <section className="mt-12 ">
         <h2 className="mb-6 heading-md">Sidebar Menu Item</h2>
         <div className="flex w-64 flex-col gap-3 border border-dashed border-violet-400 p-5">
           <SidebarMenuItem title="Title" />
@@ -498,6 +499,24 @@ export default function Home() {
             <SidebarMenuItem title="Title" />
           </div>
         </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="mb-6 heading-md">Header</h2>
+        <Header
+          title={<span className="body-md">Artist</span>}
+          value={<span className="body-md-strong">Dashboard</span>}
+          leading={
+            <div className="rounded bg-header-preview-bg body-md-strong px-3 py-2">
+              Preview
+            </div>
+          }
+          trailing={
+            <>
+              <Button variant="secondary">Log out</Button>
+            </>
+          }
+        />
       </section>
     </main>
   );

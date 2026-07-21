@@ -191,4 +191,13 @@
   --color-sidebar-menu-text-selected-hover: var(--color-brand-hover);
 
   --color-sidebar-menu-subtitle: var(--color-text-primary);
+
+  /* Header */
+  --color-header-bg: var(--color-surface-primary);
+
+  --color-header-border: var(--color-border-primary);
+
+  --color-header-text: var(--color-text-primary);
+
+  --color-header-preview-bg: var(--color-surface-secondary);
 }
