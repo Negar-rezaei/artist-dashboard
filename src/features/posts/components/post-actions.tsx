@@ -15,6 +15,7 @@ import { useToast } from "@/components/ui/toast";
 
 import { deletePost } from "@/services/posts.service";
 import type { Post } from "@/types/posts.types";
+import { useRouter } from "next/navigation";
 
 interface PostActionsProps {
   post: Post;
@@ -27,6 +28,7 @@ export function PostActions({ post, onDeleted }: PostActionsProps) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   async function handleDelete() {
     try {
@@ -82,7 +84,7 @@ export function PostActions({ post, onDeleted }: PostActionsProps) {
           >
             <DropdownItem
               onClick={() => {
-                console.log("edit:", post.id);
+                router.push(`/dashboard/posts/${post.id}/edit`);
                 setDropdownOpen(false);
               }}
             >
