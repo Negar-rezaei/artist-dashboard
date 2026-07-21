@@ -38,6 +38,10 @@
   /* Border */
   --color-border-primary: var(--color-border-primary);
 
+  /* background */
+  --color-bg-page: var(--color-bg-page);
+  --color-section-bg: var(--color-surface-primary);
+
   /* Input */
   --color-input-bg: var(--input-bg);
   --color-input-bg-disabled: var(--input-bg-disabled);
