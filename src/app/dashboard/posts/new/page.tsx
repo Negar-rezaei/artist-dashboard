@@ -1,5 +1,3 @@
-// app/dashboard/posts/new/page.tsx
-
 import { PostForm } from "@/features/posts/components/post-form/post-form";
 import { getPostTags } from "@/services/posts.service";
 

@@ -9,9 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Section } from "@/components/ui/section";
 import { useToast } from "@/components/ui/toast";
 
+import { createPost, updatePost } from "@/services/posts.service";
 import { PostTags } from "./post-tags";
-
-import { updatePost } from "@/services/posts.service";
 
 import type { Post } from "@/types/posts.types";
 
@@ -29,33 +28,42 @@ export function PostForm({ tags, post }: PostFormProps) {
   const [selectedTags, setSelectedTags] = useState(post?.tags ?? []);
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-
-    if (!post) return;
 
     try {
       setLoading(true);
 
-      await updatePost(post.id, {
-        title,
-        body,
-        tags: selectedTags,
-      });
+      if (post) {
+        await updatePost(post.id, {
+          title,
+          body,
+          tags: selectedTags,
+        });
 
-      showToast({
-        variant: "success",
-        title: "Well done!",
-        description: "Post updated successfully",
-      });
+        showToast({
+          variant: "success",
+          title: "Post updated successfully",
+        });
+      } else {
+        await createPost({
+          title,
+          body,
+          tags: selectedTags,
+        });
+
+        showToast({
+          variant: "success",
+          title: "Post created successfully",
+        });
+      }
 
       router.push("/dashboard");
       router.refresh();
     } catch {
       showToast({
         variant: "error",
-        title: "Update failed",
-        description: "Unable to update this post.",
+        title: post ? "Failed to update post" : "Failed to create post",
       });
     } finally {
       setLoading(false);
@@ -63,12 +71,9 @@ export function PostForm({ tags, post }: PostFormProps) {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="grid grid-cols-1 gap-6 lg:grid-cols-3"
-    >
+    <form onSubmit={handleSubmit} className="grid gap-6 lg:grid-cols-3">
       <div className="lg:col-span-2">
-        <Section title="Edit Post">
+        <Section title={post ? "Update Post" : "Create Post"}>
           <div className="space-y-6">
             <Field label="Title">
               <Input value={title} onChange={(e) => setTitle(e.target.value)} />
@@ -76,17 +81,7 @@ export function PostForm({ tags, post }: PostFormProps) {
 
             <Field label="Body">
               <textarea
-                className="
-              min-h-56
-              w-full
-              rounded-input
-              border
-              border-input-border
-              bg-input-bg
-              p-3
-              text-input-fg
-              outline-none
-            "
+                className="min-h-56 w-full rounded-input border border-input-border bg-input-bg p-3 text-input-fg outline-none"
                 value={body}
                 onChange={(e) => setBody(e.target.value)}
               />
@@ -99,15 +94,9 @@ export function PostForm({ tags, post }: PostFormProps) {
         </Section>
       </div>
 
-      <div className="lg:col-span-1">
-        <Section>
-          <PostTags
-            tags={tags}
-            value={selectedTags}
-            onChange={setSelectedTags}
-          />
-        </Section>
-      </div>
+      <Section>
+        <PostTags tags={tags} value={selectedTags} onChange={setSelectedTags} />
+      </Section>
     </form>
   );
 }

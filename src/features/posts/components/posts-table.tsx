@@ -76,10 +76,18 @@ export function PostsTable({ posts, onDeleted }: PostsTableProps) {
                   {post.views}
                 </td>
 
-                <td className="px-4 py-4 text-sm text-text-primary">
-                  👍 {post.reactions.likes}
-                  <span className="mx-2 text-text-secondary">|</span>
-                  👎 {post.reactions.dislikes}
+                <td className="px-4 py-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-1.5 rounded-full bg-green-50 px-3 py-1 text-sm text-green-600">
+                      <span>👍</span>
+                      <span>{post.reactions.likes}</span>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 rounded-full bg-red-50 px-3 py-1 text-sm text-red-500">
+                      <span>👎</span>
+                      <span>{post.reactions.dislikes}</span>
+                    </div>
+                  </div>
                 </td>
 
                 <td className="px-4 py-4">

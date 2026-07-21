@@ -1,11 +1,12 @@
-import { ComponentPropsWithoutRef } from "react";
+import type { ReactNode } from "react";
 
-export interface SidebarMenuItemProps extends ComponentPropsWithoutRef<"div"> {
+export interface SidebarMenuItemProps {
+  href: string;
+  className?: string;
   title: string;
   subtitle?: string;
-  href?: string;
-  startAdornment?: React.ReactNode;
-  endAdornment?: React.ReactNode;
-  state?: "default" | "hover" | "pressed";
+  startAdornment?: ReactNode;
+  endAdornment?: ReactNode;
   selected?: boolean;
+  state?: "default" | "hover" | "pressed";
 }

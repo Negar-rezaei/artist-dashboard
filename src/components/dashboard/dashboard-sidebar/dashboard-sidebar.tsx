@@ -10,8 +10,8 @@ const navigation = [
     href: "/dashboard",
   },
   {
-    title: "Posts",
-    href: "/dashboard/posts",
+    title: "New Post",
+    href: "/dashboard/posts/new",
   },
 ];
 

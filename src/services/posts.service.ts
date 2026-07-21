@@ -1,7 +1,7 @@
-import { Post, PostsResponse } from "@/types/posts.types";
+import type { Post, PostsResponse } from "@/types/posts.types";
 
 const POSTS_API_URL = "https://dummyjson.com/posts";
-const POSTS_TAGS_URL = "https://dummyjson.com/posts/tag-list";
+const POSTS_TAGES_URL = "https://dummyjson.com/posts/tag-list";
 
 export async function getPosts(): Promise<Post[]> {
   const response = await fetch(POSTS_API_URL, {
@@ -36,7 +36,7 @@ export async function getPost(id: number): Promise<Post | null> {
 }
 
 export async function getPostTags(): Promise<string[]> {
-  const response = await fetch(POSTS_TAGS_URL, {
+  const response = await fetch(POSTS_TAGES_URL, {
     next: {
       revalidate: 60,
     },
@@ -79,6 +79,29 @@ export async function updatePost(
 
   if (!response.ok) {
     throw new Error("Failed to update post");
+  }
+
+  return response.json();
+}
+
+export async function createPost(data: {
+  title: string;
+  body: string;
+  tags: string[];
+}): Promise<Post> {
+  const response = await fetch(`${POSTS_API_URL}/add`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      ...data,
+      userId: 1,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to create post");
   }
 
   return response.json();

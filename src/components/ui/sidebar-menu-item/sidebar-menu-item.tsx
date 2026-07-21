@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { cn } from "@/lib/cn";
 
 import { SidebarMenuItemProps } from "./sidebar-menu-item.types";
@@ -11,16 +13,18 @@ export function SidebarMenuItem({
   state,
   selected,
   className,
+  href,
   ...props
 }: SidebarMenuItemProps) {
   return (
-    <div
+    <Link
+      href={href}
       className={cn(
         sidebarMenuItemVariants({
           state,
           selected,
         }),
-        className
+        className,
       )}
       {...props}
     >
@@ -38,7 +42,7 @@ export function SidebarMenuItem({
                 ? "text-sidebar-menu-text-pressed"
                 : state === "hover"
                   ? "text-sidebar-menu-text-hover"
-                  : "text-sidebar-menu-text"
+                  : "text-sidebar-menu-text",
           )}
         >
           {title}
@@ -52,6 +56,6 @@ export function SidebarMenuItem({
       </div>
 
       {endAdornment}
-    </div>
+    </Link>
   );
 }
