@@ -14,6 +14,7 @@ export function Button({
 
   loading = false,
   disabled = false,
+  border = true,
 
   icon,
 
@@ -38,6 +39,7 @@ export function Button({
           variant,
           size,
           fullWidth,
+          border,
           iconOnly: isIconOnly,
         }),
         className

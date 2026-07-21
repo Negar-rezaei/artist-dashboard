@@ -149,4 +149,25 @@
   --color-dropdown-item-text-active: var(--dropdown-item-text-active);
 
   --color-dropdown-item-text-disabled: var(--dropdown-item-text-disabled);
+
+  /* pagination */
+  --color-pagination-bg: var(--pagination-bg);
+
+  --color-pagination-border: var(--pagination-border);
+
+  --color-pagination-button-bg: var(--pagination-button-bg);
+
+  --color-pagination-button-hover: var(--pagination-button-hover);
+
+  --color-pagination-button-pressed: var(--pagination-button-pressed);
+
+  --color-pagination-button-active: var(--pagination-button-active);
+
+  --color-pagination-button-active-disabled: var(--pagination-button-active-disabled);
+
+  --color-pagination-button: var(--pagination-button);
+
+  --color-pagination-button-disabled: var(--pagination-button-disabled);
+
+  --color-pagination-button-active-text: var(--pagination-button-active-text);
 }

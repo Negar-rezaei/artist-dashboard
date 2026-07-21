@@ -240,7 +240,7 @@
       ========================================================================== */
 
   --dropdown-item-bg: var(--color-surface-primary);
-  
+
   --dropdown-item-bg-hover: var(--gray-50);
 
   --dropdown-item-bg-active: var(--gray-100);
@@ -252,4 +252,28 @@
   --dropdown-item-text-active: var(--gray-900);
 
   --dropdown-item-text-disabled: var(--gray-300);
+
+  /* ==========================================================================
+       pagination
+      ========================================================================== */
+
+  --pagination-bg: var(--color-surface-primary);
+
+  --pagination-border: var(--color-border-secondary);
+
+  --pagination-button-bg: var(--color-surface-primary);
+
+  --pagination-button-hover: var(--color-surface-secondary);
+
+  --pagination-button-pressed: var(--color-surface-pressed);
+
+  --pagination-button-active: var(--color-brand);
+
+  --pagination-button-active-disabled: var(--color-brand-disabled);
+
+  --pagination-button: var(--color-icon-primary);
+
+  --pagination-button-disabled: var(--color-text-placeholder);
+
+  --pagination-button-active-text: var(--color-surface-primary);
 }

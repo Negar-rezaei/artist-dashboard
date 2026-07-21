@@ -13,6 +13,7 @@ import {
   ModalFooter,
   ModalHeader,
 } from "@/components/ui/modal";
+import { Pagination } from "@/components/ui/pagination";
 import { Toast } from "@/components/ui/toast";
 import { useState } from "react";
 
@@ -39,6 +40,8 @@ export default function Home() {
   const [largeModalOpen, setLargeModalOpen] = useState(false);
 
   const [checked, setChecked] = useState(true);
+
+  const [page, setPage] = useState(10);
 
   return (
     <main className="min-h-screen bg-modal-bg p-10">
@@ -448,6 +451,20 @@ export default function Home() {
         </DropdownItem>
         <DropdownItem loading>Saving...</DropdownItem>
         <DropdownItem disabled>Item</DropdownItem>{" "}
+      </section>
+
+      <section className="mt-12">
+        <h2 className="mb-6 heading-md">Pagination</h2>
+
+        <div className="flex flex-col gap-8">
+          {/* Default */}
+
+          <Pagination page={page} totalPages={20} onPageChange={setPage} />
+
+          {/* Disabled */}
+
+          <Pagination page={10} totalPages={20} disabled />
+        </div>
       </section>
     </main>
   );
